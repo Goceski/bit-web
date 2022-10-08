@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <!-- Text/Password Fields -->
+        <fieldset>
+            <p>
+                <label for="username">Username</label>
+                <input type="text" name="username" size="15" maxlength="30">
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" name="password" siye="15" maxlength="30">
+            </p>
+            <a href="./reset.html">Forgot Password</a>
+        </fieldset>
+        <!-- End Text/Password Fields -->
+
+        <br>
+
+         <!-- Textarea/Radio/Checkbox -->
+         <fieldset>
+            <label for="schoolQuiz">School Quiz</label>
+            <p>Odaberite omiljeno piće:
+                <br>
+                <input type="radio" name="drink" value="voda" checked="checked">Voda
+                <input type="radio" name="drink" value="sok">Sok
+                <input type="radio" name="drink" value="rakija">Rakija
+             </p>
+             <p>Odaberite jelo (može i više njih)
+                <br>
+                <input type="checkbox" name="jelo" value="Sarme">Sarme
+                <input type="checkbox" name="jelo" value="Sarme">Pica
+                <input type="checkbox" name="jelo" value="Sarme">Boranija
+             </p>
+             <p>Napišite nešto o sebi:
+                <br>
+                <textarea name="comments" cols="30" rows="10"></textarea>
+             </p>
+         </fieldset>
+         <!-- End Textarea/Radio/Checkbox -->
+
+         <br>
+
+         <!-- Dropdown/Multiselect -->
+         <fieldset>
+            <label for="dateOfBirth">Date of birth:</label>
+            <br>
+            <select name="day">
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select name="month">
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select name="year">
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="2000">2000</option>
+            </select>
+            <br>
+            <br>
+            <select name="instrumenti[]" size="3" multiple="multiple">
+                <option value="gitara">Gitara</option>
+                <option value="bas">Bas</option>
+                <option value="bubnjevi">Bubnjevi</option>
+                <option value="klavir">Klavir</option>
+                <option value="sintisajzer">Sintisajzer</option>
+            </select>
+         </fieldset>
+         <!-- End Dropdown/Multiselect -->  
+    </form>
+
+     <br>
+
+    <!-- File input/Submit -->
+    <form action="./handle-upload.html">
+         <fieldset>
+            <p>
+                <label for="then">Then</label>
+                <input type="file" name="file" id="file">
+                <br>
+                <textarea name="opis1" id="" cols="30" rows="10">Opis slike</textarea>
+                <br>
+                <label for="now">Now</label>
+                <input type="file" name="now" id="now">
+                <br>
+                <textarea name="opis1" id="" cols="30" rows="10">Opis slike</textarea>
+                <br>
+                <input type="submit" name="submit" value="Pošalji">
+            </p>
+         </fieldset>
+    </form>
+    <!-- End File input/Submit -->
+    
+    <br>
+
+    <!-- Reset/Rutton/Hidden -->
+    <form action="./handle-upload.html">
+        <fieldset>
+            <p>
+                <input type="radio" name="drink" value="voda" checked="checked">Voda
+                <input type="radio" name="drink" value="sok">Sok
+                <input type="radio" name="drink" value="rakija">Rakija
+            </p>
+            <br>
+            <p>
+                <input type="checkbox" name="drink" value="voda">Voda
+                <input type="checkbox" name="drink" value="sok">Sok
+                <input type="checkbox" name="drink" value="rakija">Rakija
+            </p>
+            <input type="reset" value="Reset">
+            <button>
+                <input type="image" src="/Lists-and-Links/images/starfish_sea_creature_summer_beach_star_ocean_icon_229624.ico" width="100" height="100">
+                Pošalji
+            </button>
+            <br>
+        </fieldset>
+    </form>
+    <!-- End Reset/Rutton/Hidden -->
+
+    <br>
+
+    <!-- Labels/Grouping -->
+    <form action="">
+        <fieldset>
+            <p>
+                <h3>Personal data :</h3>
+                <label for="name">Name</label>
+                <input type="text" name="Name" id="name">
+                <br>
+                <label for="email">e-mail</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="phone">Phone</label>
+                <input type="tel" name="tel" id="tel">
+            </p>
+            <br>
+            <p>
+                <h3>Location :</h3>
+                <label for="name">City</label>
+                <input type="text" name="city" id="city">
+                <br>
+                <label for="street">Street</label>
+                <input type="text" name="street" id="street">
+                <br>
+                <label for="number">No.</label>
+                <input type="number" name="number">
+            </p>
+            <br>
+            <p>
+                <h3>Event info :</h3>
+                <select name="event">
+                    <option value="wedding">Wedding</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="Company">Company</option>
+                </select>
+                <br>
+                <label for="brojGostiju">Broj gostiju</label>
+                <input type="number" name="number">
+            </p>
+        </fieldset>
+    </form>
+    <!-- End Labels/Grouping -->
+
+    <br>
+
+    <!-- HTML5 elements (required, date, email, url, search) -->
+    <form action="">
+        <fieldset>
+            <h3>Facebook post scheduling :</h3>
+        </fieldset>
+    </form>
+    <!-- End HTML5 elements (required, date, email, url, search) -->
+</body>
+</html>
