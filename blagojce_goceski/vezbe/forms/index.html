@@ -140,7 +140,7 @@
             </p>
             <input type="reset" value="Reset">
             <button>
-                <input type="image" src="/Lists-and-Links/images/starfish_sea_creature_summer_beach_star_ocean_icon_229624.ico" width="100" height="100">
+                <input type="image" src="../images/starfish_sea_creature_summer_beach_star_ocean_icon_229624.ico" width="100" height="100">
                 Pošalji
             </button>
             <br>
@@ -194,12 +194,26 @@
 
     <br>
 
-    <!-- HTML5 elements (required, date, email, url, search) -->
+    <!-- Ponuda za izbor -->
     <form action="">
-        <fieldset>
-            <h3>Facebook post scheduling :</h3>
-        </fieldset>
+        <input list="browsers">
+        <datalist id="browsers">
+          <option value="Internet Explorer">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
     </form>
-    <!-- End HTML5 elements (required, date, email, url, search) -->
+    <!-- End Ponuda za izbor -->
+
+    <br>
+
+    <!-- Input type date -->
+    <form>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+    </form>
+    <!-- End Input type date -->
 </body>
 </html>
