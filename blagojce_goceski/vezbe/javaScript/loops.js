@@ -1,4 +1,4 @@
-// Vezba 3 so Loops
+// Vezba 3 Loops
 var negatives = [2, -4, 5, -2, -11];
 
 // while
