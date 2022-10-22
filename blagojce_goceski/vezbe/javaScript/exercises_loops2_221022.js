@@ -45,7 +45,7 @@ for (i = 1; i < polje3.length; i++){
 }
 console.log(polje3);
 console.log("Najmanji element je", najmanji);
-console.log("Index najmanjeg broja je", index);
+console.log("Index najmanjeg elementa je", index);
 
 console.log(); // Prazan red
 
@@ -58,7 +58,7 @@ console.log(); // Prazan red
 //         najmanji4 = polje4[i];
 //     }
 // }
-
+// Izbaci tog iz niza i trazi sledeci najmanji
 console.log(); // Prazan red
 
 // Exercise 5 - Write a program that calculates the sum of positive elements in the array.
@@ -76,16 +76,77 @@ console.log("Zbir pozitivnih elemenata iznosi:", sumPositive);
 console.log(); // Prazan red
 
 // Exercise 6 - Write a program that checks if a given array is symmetric. An array is symmetric if it can be read the same way both from the left and the right hand side.
-// var polje6_1 = [2, 4, -2, 7, -2, 4, 2]; // Output: The array is symmetric.
-// var polje6_2 = [];
-// for (i = 0; i < polje6_1.length; i++){
-//     iArg = polje6_1[i];
-//     polje6_2.unshift(iArg);
-// }
-// console.log(polje6_1);
-// console.log(polje6_2);
-// if (polje6_1==polje6_2){
-//     console.log("The array is symetric");
-// }   else {
-//     console.log("The array isn't symetric");
-// }
+var polje6_1 = [2, 4, -2, 7, -2, 4, 2]; // Output: The array is symmetric.
+var polje6_2 = [];
+for (var i = 0; i < polje6_1.length; i++){
+    iArg = polje6_1[i];
+    polje6_2.unshift(iArg);
+}
+console.log(polje6_1);
+console.log(polje6_2);
+for (var y = 0; y < polje6_1.length; y++) {
+    if (polje6_1[y] !== polje6_2[y]){
+        var symetric = false;
+        break;
+    } else {
+        symetric = true;
+    }
+}
+symetric == true ? console.log("The array is symetric") : console.log("The array isn't symetric");
+
+console.log(); // Prazan red
+
+// Exercise 7 - Write a program that intertwines two arrays. You can assume the arrays are of the same length.
+var polje7_1 = [4, 5, 6, 2];
+var polje7_2 = [3, 8, 11, 9];
+var polje7_3 = [];
+console.log(polje7_1);
+console.log(polje7_2);
+for (x = 0; x < polje7_1.length; x++){
+    var xArg1 = polje7_1[x];
+    var xArg2 = polje7_2[x];
+    polje7_3.push(xArg1);
+    polje7_3.push(xArg2);
+}
+console.log(polje7_3);
+
+console.log(); // Prazan red
+
+// Exercise 8 - Write a program that concatenates two arrays.
+var polje8_1 = [4, 5, 6, 2];
+var polje8_2 = [3, 8, 11, 9];
+console.log(polje8_1);
+console.log(polje8_2);
+for (x = 0; x < polje8_2.length; x++){
+    var xArg = polje8_2[x];
+    polje8_1.push(xArg);
+}
+console.log(polje8_1);
+
+console.log(); // Prazan red
+
+// Exercise 9 - Write a program that deletes a given element e from the array a.
+var e = 2;
+var a = [4, 6, 2, 8, 2, 2];
+console.log(a);
+for (x = 0; x < a.length; x++){
+    var xElem = a[x];
+    if (xElem == e) {
+        delete a[x];
+    }
+}
+console.log(a);
+
+console.log(); // Prazan red
+
+// Exercise 10 - Write a program that inserts a given element e on the given position p in the array a. If the value of the position is greater than the array length, print the error message.
+var e = 78;
+var pos = 3;
+var a = [2, -2, 33, 12, 5, 8];
+if (pos > a.length-1){
+    console.log("Greska.");
+}   else {
+    for (i = 0; i < a.length; i++){
+        
+    }
+}
