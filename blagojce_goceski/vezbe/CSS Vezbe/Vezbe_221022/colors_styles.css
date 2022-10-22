@@ -1,0 +1,43 @@
+#prvi {
+    color: darkturquoise;
+    background-color: blueviolet;
+    opacity: 50%;
+}
+
+#drugi {
+    color: rgb(0, 206, 209);
+    background-color: rgba(0, 100, 50, 0.5);
+}
+
+#treci {
+    color: #00CED1;
+    background-color: darkkhaki;
+}
+
+#opacity {
+    opacity: 50%;
+}
+
+#rgba {
+    background-color: rgba(100, 50, 25, 0.5);
+}
+
+.a {
+    background-color: aliceblue;
+}
+
+.b {
+    background-color: hotpink;
+}
+
+.c {
+    background-color: gray;
+}
+
+.d {
+    background-color: darkblue;
+}
+
+.e {
+    background-color: lightgrey;
+}

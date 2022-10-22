@@ -1,0 +1,99 @@
+* {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Fasthand-Regular';
+    src: url("../../fontovi/Fasthand-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Fuzzy Bubbles', cursive;
+    src: url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+}
+
+h1 {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: 900;
+}
+
+#prvi {
+    font-family: 'Fasthand-Regular';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#quote1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#drugi {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
+#quote2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#treci {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#quote3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+span {
+    font-size: 25px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+#cetvrti {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#peti {
+    text-transform: lowercase;
+    text-decoration: line-through;
+}
+
+#sesti {
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+#sedmi {
+    line-height: 200%;
+    text-align: right;
+}
+
+#osmi {
+    font-style: initial;
+    text-align: center;
+}
+
+ul {
+    color: red;
+    text-shadow: 2px 2px 2px grey;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: blue;
+}

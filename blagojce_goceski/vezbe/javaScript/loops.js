@@ -1,4 +1,4 @@
-// Vezba 3 Loops
+// Exercise 3 from arrays with Loops
 var negatives = [2, -4, 5, -2, -11];
 
 // while
@@ -38,7 +38,7 @@ for (var i = 0; i < negatives.length; i++){
 // for-in
 console.log("");
 console.log("Petlja 'for-in'");
-for(var key in negatives){     // key e pozicija na elementot 0 1 2 3 4
+for(var key in negatives){     // key je pozicija elementa 0 1 2 3 4
     var broj = negatives[key];
     if(broj < 0){
         console.log("Negativan broj:", broj);
