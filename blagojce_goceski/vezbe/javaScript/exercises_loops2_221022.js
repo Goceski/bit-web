@@ -50,14 +50,30 @@ console.log("Index najmanjeg elementa je", index);
 console.log(); // Prazan red
 
 // Exercise 4 - Write a program that finds the first element larger than minimum and prints out its value.
-// var polje4 = [4, 2, 2, -1, 6];
-// var najmanji4 = polje4[0];
-// var sledeci = polje[0];
-// for (i = 1; i < polje4.length; i++){
-//     if (polje4[i] < najmanji4){
-//         najmanji4 = polje4[i];
-//     }
-// }
+var polje4 = [4, 2, 2, -1, 6];
+var najmanji4 = polje4[0];
+var index4 = 0;
+console.log(polje4);
+for (i = 1; i < polje4.length; i++){
+    if (polje4[i] < najmanji4){
+        najmanji4 = polje4[i];
+        index4 = i;
+    }
+}
+console.log("Najmanji element je", najmanji4);
+console.log("Index najmanjeg elementa je", index4);
+delete polje4[index4];
+// console.log(polje4);
+
+var najmanji5 = polje4[0];
+var index5 = 0;
+for (y = 1; y < polje4.length; y++){
+    if (polje4[y] < najmanji5){
+        najmanji5 = polje4[y];
+        index5 = y;
+    }
+}
+console.log("Sledeci najmanji element je", najmanji5);
 // Izbaci tog iz niza i trazi sledeci najmanji
 console.log(); // Prazan red
 
@@ -143,10 +159,13 @@ console.log(); // Prazan red
 var e = 78;
 var pos = 3;
 var a = [2, -2, 33, 12, 5, 8];
+console.log(a);
 if (pos > a.length-1){
     console.log("Greska.");
 }   else {
-    for (i = 0; i < a.length; i++){
-        
+    for (i = a.length-1; i >= pos; i--){
+        a[i+1] = a[i];
     }
+    a[pos] = e;    
 }
+console.log(a);
