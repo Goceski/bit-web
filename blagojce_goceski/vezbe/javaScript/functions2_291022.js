@@ -73,14 +73,34 @@ countLetterOccurrence('b', 'abrakadabra');
 function firstOccurrence (slovo, rec) {
     for (i = 0; i < rec.length; i++) {
         if (rec[i] == slovo) {
-            console.log("Slovo '" + slovo + "' je na poziciji: " + n+1);
+            console.log(rec);
+            console.log("Slovo '" + slovo + "' je na poziciji: " + (i));
             return;
-        }   else {
-            return -1;
-        }
+        } 
     } 
+    return (-1);
 }
 
 firstOccurrence('k', 'anakonda');
 firstOccurrence('b', 'abrakadabra');
-firstOccurrence('c', 'recitacija');
+console.log(firstOccurrence('d', 'recitacija'));
+
+// Exercise 6 - Write a function to find the position of the last occurrence of a character in a string. The result should be in human numeration form. If there are no occurrences of the character, function should return -1.
+function lastOccurrence (slovo, rec) {
+    var i;
+    var duzina = rec.length - 1;
+    for ( i = duzina; i>=0; i--) {
+        if (rec[i] == slovo) {
+            console.log(rec);
+            console.log("Slovo '" + slovo + "' je na poziciji: " + (i+1));
+            return;
+        } 
+    } 
+    return (-1);
+}
+
+lastOccurrence('k', 'anakokonda');
+lastOccurrence('b', 'abrakadabra');
+console.log(lastOccurrence('d', 'recitacija'));
+
+// Exercise 7 - Write a function to convert string into an array. Space in a string should be represented as “null” in new array.
