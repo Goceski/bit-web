@@ -1,0 +1,57 @@
+#prvaLista {
+    list-style-type: circle;
+}
+
+#drugaLista {
+    list-style-type: square;
+}
+
+#trecaLista {
+    list-style-type: upper-alpha;
+}
+
+#cetvrtaLista {
+    list-style-type: upper-roman;
+}
+
+#petaLista {
+    list-style-image: url(../../images/icons8-basketball-48.png);
+    width: 400px;
+    list-style-position: inside;
+}
+
+#sestaLista {
+    list-style-image: url(../../images/icons8-home-48.png);
+    width: 400px;
+    list-style-position: outside;
+}
+
+.tabela {
+    width: 400px;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+#header {
+    background-color: red;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.slika {
+    height: 100px;
+}
+
+.odd {
+    background-color: lightgrey;
+}
+
+tr:hover {
+    background-color: rgb(223, 181, 67);
+}
