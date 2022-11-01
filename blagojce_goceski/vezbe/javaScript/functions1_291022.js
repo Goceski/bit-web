@@ -41,6 +41,16 @@ function threeDigit(a) {
 
 console.log(threeDigit(165));
 
+// Exercise 3 - Drugi nacin
+function checkDigitLength(a) {
+    return (a + '').length;
+}
+
+var digitLength = checkDigitLength(332);
+if (digitLength >= 3) {
+    console.log('The digit length is', digitLength);
+}
+
 // Exercise 4 - Write a program that calculates an arithmetic mean of four numbers.
 var prosek;
 function average(a, b, c, d) {
@@ -49,6 +59,21 @@ function average(a, b, c, d) {
 }
 
 console.log((average(1, 2, 3, 4)));
+
+// Exercise 4 - Drugi nacin
+function arithmeticMean() {
+    var args = arguments;
+    var result = 0;
+
+    for (var i = 0; i < args.length; i++) {
+        var value = args[i + ''];
+        result += value;
+    }
+
+    return result / args.length;
+}
+
+console.log(arithmeticMean(3, 4, 5, 18, 22))
 
 // Exercise 5 - Write a program that draws a square of a given size. For example, if the size of square is 5 the program should draw:
 // *****
@@ -65,6 +90,31 @@ function drawASquare(a) {
 }
 
 drawASquare(5);
+
+// Exercise 5 - Ispravan nacin
+function square(a) {
+    var result = '';
+    for (var i = 0; i < a; i++) {
+        for (var j = 0; j < a; j++) {
+            if (i == 0 || i == (a - 1)) {
+                result += '*'
+            } else {
+                if (j == 0 || j == (a - 1)) {
+                    result += '*'
+                } else {
+                    result += ' '
+                }
+            }
+
+        }
+
+        result += '\n';
+    }
+
+    console.log(result);
+}
+
+square(7);
 
 // Exercise 6 - Write a program that draws a horizontal chart representing three given values. For example, if values are 5, 3, and 7, the program should draw:
 // * * * * *
@@ -95,6 +145,27 @@ function drawHorChart(a, b, c) {
 
 drawHorChart(4, 10, 5);
 
+// Exercise 6 - Drugi nacin
+
+function draw(a) {
+    var result = '';
+    for (var i = 0; i < a; i++) {
+        result += '*'
+    }
+
+    console.log(result);
+}
+
+function drawLines() {
+    var args = arguments;
+    for (var i = 0; i < args.length; i++) {
+        var value = args[i + '']
+        draw(value);
+    }
+}
+
+drawLines(8, 3, 5)
+
 // Exercise 7 - Write a program that calculates a number of digits of a given number.
 function numberOfDigits(a) {
     var aString = '' + a;
@@ -124,6 +195,20 @@ function numberOfAppearance(a, params) {
 }
 
 numberOfAppearance(broj, niz);
+
+// Exercise 8 - Ispravan nacin
+function calculateAppearances(input, value) {
+    var counter = 0;
+    for (var i = 0; i < input.length; i++) {
+        if (value === input[i]) {
+            counter++;
+        }
+    }
+
+    return counter;
+}
+
+console.log(calculateAppearances([3, 4, 1, 8, 7, 1], 1))
 
 // Exercise 9 - Write a program that calculates the sum of odd elements of a given array.
 var niz = [2, 4, 7, 8, 7, 7, 1, 5];
@@ -161,6 +246,20 @@ console.log();  // Prazan red
 numberOfAppearances('jkahdjaaaa');
 console.log();  // Prazan red
 numberOfAppearances('AkjhjhaaaAAAAa');
+
+// Exercise 10 - Bolji nacin
+function sumOfLetterAppearences(inputString, inputLetter) {
+    var counter = 0;
+    for (var i = 0; i < inputString.length; i++) {
+        if (inputString[i].toLowerCase() == inputLetter.toLowerCase()) {
+            counter++;
+        }
+    }
+
+    return counter;
+}
+
+console.log(sumOfLetterAppearences('It\'s a beautiful day', 'i'));
 
 // Exercise 11 - Write a program that concatenates a given string given number of times. For example, if “abc” and 4 are given values, the program prints out abcabcabcabc.
 var str11 = 'abc';
