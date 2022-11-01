@@ -89,25 +89,108 @@ studentsGrades(students, points);
 // Exercise 4 - Sort a previously defined array. Place its sorted values into a new array whose values are equivalent to the first array's values multiplied by 2.
 // Input - [ 13, 11, 15, 5, 6, 1, 8, 12 ]
 // Output - [ 15, 13, 12, 11, 8, 6, 5, 1 ]
+function multiplyByTwo(input) {
+    console.log(input);
+    for (j = 0; j < input.length; j++) {
+        input[j] *= 2;
+    }
+}
 
-
+function sortArray(input) {
+    console.log(input);
+    for (i = 1; i < input.length; i++) {
+        for (j = 1; j < input.length; j++) {
+            if (input[j] < input[j-1]) {
+                var a = input[j];
+                input[j] = input[j-1];
+                input[j-1] = a;
+            }
+        }
+    }
+    multiplyByTwo(input);   // Svaki element pomnoziti sa 2
+    console.log(input);
+}
 
 var niz = [ 13, 11, 15, 5, 6, 1, 8, 12 ];
+sortArray(niz);
 
 
-// Exercise 5 - 
+// Exercise 5 - Sort a previously defined array in a descending order and display it in the console.
+function sortDescendingArray(input) {
+    console.log(input);
+    for (i = 1; i < input.length; i++) {
+        for (j = 1; j < input.length; j++) {
+            if (input[j] > input[j-1]) {
+                var a = input[j];
+                input[j] = input[j-1];
+                input[j-1] = a;
+            }
+        }
+    }
+    console.log(input);
+}
+
+var niz = [ 13, 11, 15, 5, 6, 1, 8, 12 ];
+sortDescendingArray(niz);
 
 
+// Exercise 6 - Write a program that uses a loop to add all the even numbers from 1 to 1000 and subtracts all the odd numbers 1 to 500 from the calculated sum. The result should then be multiplied by 12.5 and displayed in console.
+// Output: 2350000
+function sumOdd(n) {
+    var sum = 0;
+    for (i = 1; i <=n; i++) {
+        if (i % 2 == 1) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+function sumEven(n) {
+    var sum = 0;
+    for (i = 1; i <=n; i++) {
+        if (i % 2 == 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+console.log((sumEven(1000) - sumOdd(500)) * 12.5);
 
 
+// Exercise 7 - Define a 10 element array. Take the first two letters from every string (that has at least 2 letters) in the array and create a new string from them. Print it out in the console.
+// Input: [ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ]
+// Output: AnStJoJoDaMa
+function toString(input) {
+    var str = '';
+    for (i = 0; i < input.length; i++) {
+        if (typeof input[i] === 'string' && input[i].length >= 2) {
+            str += input[i][0] + input[i][1];
+        }
+    }
+    console.log(input);
+    console.log(str);
+}
+
+var niz = [ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ];
+toString(niz);
 
 
+// Exercise 8 - Write a program that takes a string and prints its characters out in reversed order in the console.
+// Input: Belgrade Institute of Technology
+// Output: ygolonhceT fo etutitsnI edargleB
+function reversedOrder(input) {
+    console.log(input);
+    var b = '';
+    for (i = input.length - 1; i >= 0; i--) {
+        b += input[i];
+    }
+    console.log(b);
+}
+
+var a = "Belgrade Institute of Technology";
+reversedOrder(a);
 
 
-
-
-
-
-
-
-
+// Exercise 9 - Write a program that displays all the combinations of two numbers between 1 and 7. Don't display two of the same numbers at the same time. Display the number of possible combinations, as well. (E.g. (1.2),(2,1) is allowed, but not (1,1), (2,2)...).
