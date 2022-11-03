@@ -1,0 +1,52 @@
+div {
+    width: 200px;
+    height: 200px;
+}
+
+.zuto {
+    background-color: yellow;
+}
+
+.plavo {
+    background-color: blue;
+}
+
+.crveno {
+    background-color: red;
+}
+
+#cetvrti {
+    position: relative;
+}
+
+#peti {
+    position: relative;
+    top: -100px;
+    left: 100px;
+}
+
+#sesti {
+    position: relative;
+    top: -200px;
+    left: 200px;
+}
+
+#sedmi {
+    position: absolute;
+    right: 20px;
+    z-index: 3;
+}
+
+#osmi {
+    position: absolute;
+    right: 120px;
+    top: 1348px;
+    z-index: 2;
+}
+
+#deveti {
+    position: absolute;
+    right: 220px;
+    top: 1448px;
+    z-index: 1;
+}

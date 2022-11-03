@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#prvalista {
+    width: 960px;
+    height: 25px;
+    background-color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+#home {
+    float: right;
+}
+
+#about {
+    float: right;
+}
+
+#contact {
+    float: right;
+}
+
+#blog {
+    float: right;
+}
+
+/* ul li {
+    display: inline;
+    right: 10px;
+} */
+
+.kontejner {
+    width: 960px;
+    position: relative;
+}
+
+#div1 {
+    width: 480px;
+    height: 500px;
+    background-color: rgb(236, 121, 26);
+    float: left;
+}
+
+#div2 {
+    width: 480px;
+    height: 500px;
+    background-color: rgb(40, 146, 196);
+    position: relative;
+    float: right;
+}
+
+img {
+    height: 275px;
+    float: left;
+    position: relative;
+    left: 250px;
+    top: -400px;
+}
+
+#div3 {
+    width: 300px;
+    height: 200px;
+    background-color: brown;
+    position: fixed;
+    top: 560px;
+}
+
+#div4 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(40, 22, 119);
+    position: fixed;
+    top: 560px;
+    left: 315px;
+}
+
+.align {
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#drugalista {
+    width: 300px;
+    height: 250px;
+    background-color: rgb(221, 162, 35);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    list-style-type: none;
+    position: fixed;
+    top: 550px;
+    left: 660px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.boja {
+    color: rgb(34, 62, 75);
+}
