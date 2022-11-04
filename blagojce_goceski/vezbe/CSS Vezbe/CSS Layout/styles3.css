@@ -6,9 +6,10 @@
 #prvalista {
     width: 960px;
     height: 25px;
-    background-color: brown;
+    background-color: rgb(193, 57, 43);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
+    font-size: 20px;
     list-style-type: none;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -49,16 +50,15 @@ a {
 #div1 {
     width: 480px;
     height: 500px;
-    background-color: rgb(236, 121, 26);
+    background-color: rgb(239, 96, 38);
     float: left;
 }
 
 #div2 {
     width: 480px;
     height: 500px;
-    background-color: rgb(40, 146, 196);
-    position: relative;
-    float: right;
+    background-color: rgb(42, 165, 228);
+    float: left;
 }
 
 img {
@@ -72,18 +72,23 @@ img {
 #div3 {
     width: 300px;
     height: 200px;
-    background-color: brown;
-    position: fixed;
-    top: 560px;
+    background-color: rgb(193, 57, 43);
+    clear: left;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
 }
+
 
 #div4 {
     width: 300px;
     height: 200px;
-    background-color: rgb(40, 22, 119);
-    position: fixed;
-    top: 560px;
-    left: 315px;
+    background-color: rgb(45, 62, 80);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
 }
 
 .align {
@@ -98,17 +103,147 @@ img {
 #drugalista {
     width: 300px;
     height: 250px;
-    background-color: rgb(221, 162, 35);
+    background-color: rgb(255, 190, 0);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
     list-style-type: none;
-    position: fixed;
-    top: 550px;
-    left: 660px;
     text-align: left;
     font-size: 20px;
+    float: left;
+    margin-left: 30px;
+    position: relative;
+    top: -270px;
 }
 
 .boja {
     color: rgb(34, 62, 75);
+}
+
+#p1 {
+    clear: left;
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -300px;
+}
+
+#p2 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -300px;
+}
+
+#div5 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 190, 0);
+    clear: left;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -290px;
+}
+
+#div6 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(39, 174, 97);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -290px;
+}
+
+#div7 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(193, 57, 43);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -290px;
+}
+
+#p3 {
+    clear: left;
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -280px;
+}
+
+#p4 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -280px;
+}
+
+#p5 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -280px;
+}
+
+#div8 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(45, 62, 80);
+    clear: left;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+#div9 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 190, 0);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+#div10 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(39, 174, 97);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+#p6 {
+    clear: left;
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -250px;
+}
+
+#p7 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -250px;
+}
+
+#p8 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -250px;
 }
