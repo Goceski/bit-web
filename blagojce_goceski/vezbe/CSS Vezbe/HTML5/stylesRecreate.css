@@ -59,6 +59,7 @@ a {
 
 img {
     height: 275px;
+    clear: left;
     float: left;
     position: relative;
     left: 250px;
@@ -75,7 +76,6 @@ img {
     position: relative;
     top: -260px;
 }
-
 
 #div4 {
     width: 300px;
@@ -140,7 +140,7 @@ img {
     float: left;
     margin-left: 15px;
     position: relative;
-    top: -290px;
+    top: -280px;
 }
 
 #div6 {
@@ -150,7 +150,7 @@ img {
     float: left;
     margin-left: 15px;
     position: relative;
-    top: -290px;
+    top: -280px;
 }
 
 #div7 {
@@ -160,7 +160,7 @@ img {
     float: left;
     margin-left: 15px;
     position: relative;
-    top: -290px;
+    top: -280px;
 }
 
 #p3 {
@@ -169,7 +169,7 @@ img {
     width: 300px;
     margin-left: 15px;
     position: relative;
-    top: -280px;
+    top: -270px;
 }
 
 #p4 {
@@ -177,7 +177,7 @@ img {
     width: 300px;
     margin-left: 15px;
     position: relative;
-    top: -280px;
+    top: -270px;
 }
 
 #p5 {
@@ -185,7 +185,7 @@ img {
     width: 300px;
     margin-left: 15px;
     position: relative;
-    top: -280px;
+    top: -270px;
 }
 
 #div8 {
@@ -196,7 +196,7 @@ img {
     float: left;
     margin-left: 15px;
     position: relative;
-    top: -260px;
+    top: -250px;
 }
 
 #div9 {
@@ -206,7 +206,7 @@ img {
     float: left;
     margin-left: 15px;
     position: relative;
-    top: -260px;
+    top: -250px;
 }
 
 #div10 {
@@ -216,7 +216,7 @@ img {
     float: left;
     margin-left: 15px;
     position: relative;
-    top: -260px;
+    top: -250px;
 }
 
 #p6 {
@@ -225,7 +225,7 @@ img {
     width: 300px;
     margin-left: 15px;
     position: relative;
-    top: -250px;
+    top: -240px;
 }
 
 #p7 {
@@ -233,7 +233,7 @@ img {
     width: 300px;
     margin-left: 15px;
     position: relative;
-    top: -250px;
+    top: -240px;
 }
 
 #p8 {
@@ -241,5 +241,5 @@ img {
     width: 300px;
     margin-left: 15px;
     position: relative;
-    top: -250px;
+    top: -240px;
 }
