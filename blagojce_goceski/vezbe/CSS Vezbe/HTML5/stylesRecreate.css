@@ -1,0 +1,245 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    width: 960px;
+    height: 45px;
+    background-color: rgb(193, 57, 43);
+}
+
+nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+#home {
+    float: right;
+}
+
+#about {
+    float: right;
+}
+
+#contact {
+    float: right;
+}
+
+#blog {
+    float: right;
+}
+
+.main {
+    width: 960px;
+    position: relative;
+}
+
+#div1 {
+    width: 480px;
+    height: 500px;
+    background-color: rgb(239, 96, 38);
+    float: left;
+}
+
+#div2 {
+    width: 480px;
+    height: 500px;
+    background-color: rgb(42, 165, 228);
+    float: left;
+}
+
+img {
+    height: 275px;
+    float: left;
+    position: relative;
+    left: 250px;
+    top: -400px;
+}
+
+#div3 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(193, 57, 43);
+    clear: left;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+
+#div4 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(45, 62, 80);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+.align {
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#drugalista {
+    width: 300px;
+    height: 250px;
+    background-color: rgb(255, 190, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    list-style-type: none;
+    text-align: left;
+    font-size: 20px;
+    float: left;
+    margin-left: 30px;
+    position: relative;
+    top: -270px;
+}
+
+.boja {
+    color: rgb(34, 62, 75);
+}
+
+#p1 {
+    clear: left;
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -300px;
+}
+
+#p2 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -300px;
+}
+
+#div5 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 190, 0);
+    clear: left;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -290px;
+}
+
+#div6 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(39, 174, 97);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -290px;
+}
+
+#div7 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(193, 57, 43);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -290px;
+}
+
+#p3 {
+    clear: left;
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -280px;
+}
+
+#p4 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -280px;
+}
+
+#p5 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -280px;
+}
+
+#div8 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(45, 62, 80);
+    clear: left;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+#div9 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 190, 0);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+#div10 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(39, 174, 97);
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: -260px;
+}
+
+#p6 {
+    clear: left;
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -250px;
+}
+
+#p7 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -250px;
+}
+
+#p8 {
+    float: left;
+    width: 300px;
+    margin-left: 15px;
+    position: relative;
+    top: -250px;
+}

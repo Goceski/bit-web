@@ -1,0 +1,21 @@
+#img1 {
+    height: 200px;
+    display: block;
+    float: left;
+}
+
+#img2 {
+    width: 200px;
+    display: block;
+    clear: left;
+    margin: 0 auto;
+}
+
+#img3 {
+    width: 200px;
+    height: 200px;
+    display: block;
+    clear: left;
+    float: right;
+
+}
