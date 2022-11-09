@@ -81,5 +81,46 @@ console.log(filterArray); // [12, 34, "blabla"]
 
 
 
-// 
+// -----------------------------
+// --------- FUNCTIONS ---------
+// -----------------------------
 
+
+
+// Write a function to find the element that occurs most frequently.
+// ------- LONGHAND -------
+function mostFrequently(array) {
+    if(array.length == 0)
+        return null;
+    var modeMap = {};
+    var maxEl = array[0], maxCount = 1;
+    for(var i = 0; i < array.length; i++)
+    {
+        var el = array[i];
+        if(modeMap[el] == null)
+            modeMap[el] = 1;
+        else
+            modeMap[el]++;  
+        if(modeMap[el] > maxCount)
+        {
+            maxEl = el;
+            maxCount = modeMap[el];
+        }
+    }
+    return maxEl;
+}
+
+console.log(mostFrequently(['pear', 'apple', 'orange', 'apple'])) // apple
+console.log(mostFrequently([1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 5, 3])) // 4
+// ------- SHORTHAND -------
+function mostFrequently(input) {
+    return input.sort((a,b) => input.filter(v => v===a).length - input.filter(v => v===b).length
+        ).pop();
+}
+    
+console.log(mostFrequently(['pear', 'apple', 'orange', 'apple'])) // apple
+console.log(mostFrequently([1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 5, 3])) // 4
+
+
+
+// 

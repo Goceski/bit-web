@@ -141,3 +141,26 @@ console.log(medianElement(n));
 
 
 // Exercise 10 - Write a function to find the element that occurs most frequently.
+function mostFrequently(input) {
+    var mf = 1;
+    var m = 0;
+    var item;
+    for (var i = 0; i < input.length; i++) {
+            for (var j = i; j < input.length; j++) {
+                    if (input[i] == input[j]) {
+                        m++;
+                    }
+                    if (mf < m) {
+                      mf = m; 
+                      item = input[i];
+                    }
+            }
+            m = 0;
+    }
+    console.log(item + " ( " + mf + " times ) ") ;
+}
+  
+console.log(mostFrequently(['pear', 'apple', 'orange', 'apple'])) // apple
+console.log(mostFrequently([1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 5, 3])) // 4
+
+
