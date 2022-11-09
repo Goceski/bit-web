@@ -1,0 +1,47 @@
+main {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    margin-left: 25px;
+    position: relative;
+    float: left;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-left: 20px;
+    position: relative;
+    float: left;
+}
+
+h5 {
+    margin-left: 177px;
+    position: relative;
+    clear: left;
+    float: left;
+    top: -55px;
+}
+
+#levi {
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    clear: left;
+    position: relative;
+    float: left;
+}
+
+#desni {
+    border-left: solid 3px;
+    width: 55%;
+    position: relative;
+    float: left;
+    padding-left: 15px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}

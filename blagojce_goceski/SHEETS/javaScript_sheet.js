@@ -147,4 +147,17 @@ console.log(mostFrequently([1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 5, 3])) // 4
 
 
 
-// 
+// Variable arguments to function
+// just use the 'arguments' object.
+function foo() {
+    for (var i = 0; i < arguments.length; i++) {
+      console.log(arguments[i]);
+    }
+  }
+
+  // Ili
+  unction my_log(...args) {
+    // args is an Array
+    console.log(args);
+    // You can pass this array as parameters to another function
+    console.log(...args);
