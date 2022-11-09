@@ -145,8 +145,8 @@ function mostFrequently(input) {
     var mf = 1;
     var m = 0;
     var item;
-    for (var i = 0; i < input.length; i++) {
-            for (var j = i; j < input.length; j++) {
+    for (let i = 0; i < input.length; i++) {
+            for (let j = 0; j < input.length; j++) {
                     if (input[i] == input[j]) {
                         m++;
                     }
@@ -157,10 +157,31 @@ function mostFrequently(input) {
             }
             m = 0;
     }
-    console.log(item + " ( " + mf + " times ) ") ;
+    return console.log(item + " - " + mf + " times") ;
 }
   
-console.log(mostFrequently(['pear', 'apple', 'orange', 'apple'])) // apple
-console.log(mostFrequently([1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 5, 3])) // 4
+mostFrequently(['pear', 'apple', 'orange', 'apple']) // apple
+mostFrequently([1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 5, 3]) // 4
 
 
+// Exercise 11 - Write a function to find and return the first, middle and last element of an array if the array has odd number of elements. If number of elements is even, return just the first and the last. In other cases (empty array), input array should be returned.
+function firstMiddleLast(input) {
+    if (input.length == 0) {
+        return console.log(input);
+    } else if (input.length % 2 == 0) {
+        return (
+            console.log('First elemet - ' + input[0] + '\nLast element - ' + input[input.length-1])
+        )
+    } else {
+        return (
+            console.log('First elemet - ' + input[0] + '\nMiddle element - ' + input[parseInt(input.length/2)] + '\nLast element - ' + input[input.length-1])
+        )
+    }
+}
+
+firstMiddleLast(['pear', 'apple', 'orange', 'apple'])
+firstMiddleLast([1, 2, 2, 3, 4, 5, 3])
+firstMiddleLast([])
+
+
+// Exercise 12 - Write a function to find the average of N elements. Make the function flexible to receive dynamic number or parameters.
