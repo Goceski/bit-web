@@ -102,3 +102,42 @@ console.log(maxElementInArray(a));
 
 
 // Exercise 8 - Write a function to find the maximum and minimum elements. Function returns an array.
+function maxMinimumElementsInArray(input) {
+    let maximum = input[0];
+    let minimum = input[0];
+    a = [];
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] > maximum) {
+            maximum = input[i];
+        } else if (input[i] < minimum) {
+            minimum = input[i];
+        }
+    }
+    a.push(minimum);
+    a.push(maximum);
+    return a
+}
+
+var n = [1, 15, -25, 0, 32, -10, 10];
+console.log(maxMinimumElementsInArray(n));
+
+
+// Exercise 9 - Write a function to find the median element of array. The median of a array of size N is defined as the middle element when N is odd and average of middle two elements when N is even.
+function medianElement(input) {
+    let medianElm;
+    if (input.length % 2 == 0) {
+        let x = input.length / 2;
+        medianElm = (input[x-1] + input[x]) / 2;
+        return medianElm;
+    } else {
+        let y = parseInt(input.length / 2);
+        medianElm = input[y];
+        return medianElm;
+    }
+}
+
+var n = [1, 15, -25, 7, 32, -10, 10];
+console.log(medianElement(n));
+
+
+// Exercise 10 - Write a function to find the element that occurs most frequently.
