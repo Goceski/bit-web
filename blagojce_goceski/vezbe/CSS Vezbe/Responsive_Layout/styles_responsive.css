@@ -297,10 +297,15 @@
         background-color: rgb(66, 139, 202);
     }
 
+    /* main {
+        align-items: center;
+        position: relative;
+    } */
+
     #prvi {
         width: 31%;
         margin-bottom: 10px;
-        margin-left: 17px;
+        margin-left: 2.7%;
         float: left;
     }
 
@@ -308,7 +313,7 @@
         width: 31%;
         border: none;
         margin-bottom: 10px;
-        margin-left: 5px;
+        margin-left: 1%;
         float: left;
     }
 
@@ -316,7 +321,7 @@
         width: 31%;
         border: none;
         margin-bottom: 20px;
-        margin-left: 5px;
+        margin-left: 1%;
         float: left;
     }
 
@@ -333,13 +338,13 @@
         padding-top: 5px;
         padding-bottom: 5px;
         max-width: 100%;
-        margin-left: 5px;
+        margin-left: 1%;
     }
 
     p {
         font-size: 0.75rem;
         color: rgb(83, 83, 83);
-        margin-left: 5px;
+        margin-left: 1%;
         text-align: center;
         padding: 2px;
     }

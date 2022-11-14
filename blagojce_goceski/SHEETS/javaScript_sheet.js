@@ -156,8 +156,9 @@ function foo() {
   }
 
   // Ili
-  unction my_log(...args) {
+function my_log(...args) {
     // args is an Array
     console.log(args);
     // You can pass this array as parameters to another function
     console.log(...args);
+}
