@@ -184,21 +184,114 @@ firstMiddleLast([1, 2, 2, 3, 4, 5, 3])
 firstMiddleLast([])
 
 
-
 // Exercise 12 - Write a function to find the average of N elements. Make the function flexible to receive dynamic number or parameters.
-function foo() {
+function average() {
+    let sum = 0;
     for (var i = 0; i < arguments.length; i++) {
-      console.log(arguments[i]);
+      sum += arguments[i];
     }
+    let n = arguments.length;
+    return (sum / n);
   }
 
-  // Ili
-function my_log(...args) {
-    // args is an Array
-    console.log(args);
-    // You can pass this array as parameters to another function
-    console.log(...args);
+console.log(average(1, 2, 3, 4));
+console.log(average(3, 5, 8, 14, 20));
+
+
+// Exercise 13 - Write a function to find all the numbers greater than the average.
+function average() {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+      sum += arguments[i];
+    }
+    let n = arguments.length;
+    console.log('Prosek : ', sum/n);
+    return (sum / n);
+  }
+
+  function greaterThanAverage() {
+    let a = average(...arguments);
+    for (let j = 0; j < arguments.length; j++) {
+        if (arguments[j] > a) {
+            console.log(arguments[j]);
+        }
+      }
+    }
+
+greaterThanAverage(1, 2, 3, 4, 7, 10);
+
+
+// Exercise 14 - The body mass index (BMI) is the ratio of the weight of a person (in kilograms) to the square of the height (in meters). Write a function that takes two parameters, weight and height, computes the BMI, and prints the corresponding BMI category:
+// ● Starvation: less than 15
+// ● Anorexic: less than 17.5
+// ● Underweight: less than 18.5
+// ● Ideal: greater than or equal to 18.5 but less than 25
+// ● Overweight: greater than or equal to 25 but less than 30
+// ● Obese: greater than or equal to 30 but less than 40
+// ● Morbidly obese: greater than or equal to 40
+function massIndex(weight, height) {
+    let bmi = weight / (height/100)**2;
+    console.log('Tezina : ' + weight + 'kg - ' + 'Visina : ' + height + 'cm - ' + 'BMI :' + bmi);
+    if (bmi < 15) {
+        console.log('● Starvation: less than 15');
+    } else if (bmi >= 15 && bmi < 17.5) {
+        console.log('● Anorexic: less than 17.5');
+    } else if (bmi >= 17.5 && bmi < 18.5) {
+        console.log('● Underweight: less than 18.5');
+    } else if (bmi >= 18.5 && bmi < 25) {
+        console.log('Ideal: greater than or equal to 18.5 but less than 25');
+    } else if (bmi >= 25 && bmi < 30) {
+        console.log('● Overweight: greater than or equal to 25 but less than 30');
+    } else if (bmi >= 30 && bmi < 40) {
+        console.log('● Obese: greater than or equal to 30 but less than 40');
+    } else {
+        console.log('● Morbidly obese: greater than or equal to 40');
+    }
 }
 
+massIndex(85, 188);
 
 
+// Exercise 15 - Write a function that takes a list of strings and prints them, one per line, in a rectangular frame.:
+// For example the list ["Hello", "World", "in", "a", "frame"] gets
+// printed as:
+// *********
+// * Hello *
+// * World *
+// * in    *
+// * a     *
+// * frame *
+// *********
+function printListOfStrings (input) {
+    // Trazi najduzi string
+    let maxLengthElem = 0;
+    for (let i = 0; i < input.length; i++) {
+        if (input[i].length > maxLengthElem) {
+            maxLengthElem = input[i].length;
+        }
+    }
+    console.log('Najduzi string u nizu: ' + maxLengthElem);
+
+    // Stampa prve zvezdice
+    let zvezdice = ''
+    for (let j = 0; j < maxLengthElem + 4; j++) {
+        zvezdice += '*'
+    }
+    console.log(zvezdice);
+
+    // Stampa elemente niza
+    for (let m = 0; m < input.length; m++) {
+        let brojPraznihMesta = maxLengthElem - input[m].length;
+        let praznaMesta = '';
+        for (let p = 0; p < brojPraznihMesta; p++) {
+            praznaMesta += ' ';
+        }
+        console.log('* ' + input[m] + praznaMesta + ' *');
+    }
+
+    // Stampa zadnji red
+    console.log(zvezdice);
+}
+
+var niz = ["Hello", "World", "in", "a", "frames", "abrakadabra"];
+printListOfStrings(niz);
