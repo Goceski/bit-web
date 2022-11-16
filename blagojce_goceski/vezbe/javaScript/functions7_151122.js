@@ -62,6 +62,7 @@ function celsiusToFahrenheit(input) {
     console.log(a + "°C is " + far + "°F.")
 }
 
+
 celsiusToFahrenheit(35);
 
 function fahrenheitToCelsius(input) {
@@ -73,4 +74,110 @@ function fahrenheitToCelsius(input) {
 fahrenheitToCelsius(83);
 
 
-// Exercise 5 - 
+// Exercise 5 - Create a function that validates a password to conform to the following rules:
+// ● Length between 6 and 24 characters,
+// ● At least one uppercase letter (A-Z).
+// ● At least one lowercase letter (a-z).
+// ● At least one digit (0-9).
+// ● Maximum of 2 repeated characters (“aa” is OK, “aaa” is NOT).
+// ● Supported special characters: ! @ # $ % ^ & * ( ) + = _ - { } [ ] : ; " ' ? < > , .
+// ● Examples: validatePassword("P1zz@") ➞ false // Too short.
+// ● validatePassword("iLoveYou") ➞ false // Missing a number.
+// ● validatePassword("Fhg93@") ➞ true // OK!
+function validatePassword(input) {
+
+    if (input.length < 6) {
+        console.log("Too short");
+        return false;
+    } 
+    
+    if (input.length > 24) {
+        console.log("Too long");
+        return false;
+    }
+
+    if (!/[A-Z]/.test(input)) {
+        console.log("Should contain at least one uppercase letter");
+        return false;
+    }
+
+    if (!/[a-z]/.test(input)) {
+        console.log("Should contain at least one lowercase letter");
+        return false;
+    }
+
+    if (!/[0-9]/.test(input)) {
+        console.log("Should contain at least one digit");
+        return false;
+    }
+
+    for (let i = 2; i < input.length; i++) {
+        if (input[i] == input[i-1] && input[i] == input[i-2]){
+            console.log("Maximum of 2 repeated characters");
+            return false;
+        }
+    }
+
+// ● Supported special characters: ! @ # $ % ^ & * ( ) + = _ - { } [ ] : ; " ' ? < > , .
+    return console.log("The password is correct");
+}
+
+validatePassword("AKHK0JDsfeegJGJKJ");
+
+
+// Exercise 6 - Create a function that finds how many prime numbers there are, up to the given integer.
+// Examples: primeNumbers(10) ➞ 4 // 2, 3, 5 and 7
+// primeNumbers(20) ➞ 8 // 2, 3, 5, 7, 11, 13, 17 and 19
+// primeNumbers(30) ➞ 10 // 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29
+
+function isPrime(a) {
+    for (i = 2; i < a; i++) {
+        if (a % i == 0) {
+            return false; // Not prime number
+        }
+    }   
+    return true;
+}
+
+function primeNumbers(input) {
+    let broj = 0;
+    let niz = [];
+    for (j = 2; j <= input; j++) {
+        if (isPrime(j)) {
+            broj++;
+            niz.push(j);
+        }
+    }
+    return console.log(broj + ' // ' + niz);
+}
+
+primeNumbers(10);
+primeNumbers(20);
+primeNumbers(30);
+
+
+// Exercise 7 - Create a function that returns an array that expands by 1 from 1 to the value of the input, and then reduces back to 1. Items in the arrays will be the same as the length of the arrays.
+// Examples:
+// diamondArrays(1) ➞ [1],
+// diamondArrays(2) ➞ [1, 2, 2, 1]
+// diamondArrays(5) ➞ [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1]
+function diamondArrays(input) {
+    let niz = [];
+
+    for (let i = 1; i <= input; i++) {
+        niz.push(input);
+    }
+
+    for (let j = input-1; j >= 1; j--) {
+        for (let x = 1; x <= j; x++) {
+            niz.push(j);
+            niz.unshift(j);
+        }
+    }
+
+    return niz;
+}
+
+console.log(diamondArrays(1));
+console.log(diamondArrays(2));
+console.log(diamondArrays(5));
