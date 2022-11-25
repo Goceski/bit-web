@@ -67,6 +67,9 @@ prestupnaGodina(1999);
 
 // Exercise 3 - Napisati funkciju koja za zadatu reč (ili rečenicu) proverava koliko ima samoglasnika i koliko suglasnika.
 function samoglasniciSuglasnici(input) {
+    if (!input || input.length == 0) {
+        return [];
+    }
     var b = input.toLowerCase();
     var brSamoglasnici = 0;
     var brSuglasnici = 0;
@@ -114,6 +117,50 @@ function samoglasniciSuglasnici(input) {
 samoglasniciSuglasnici('Provera da li radi?');
 samoglasniciSuglasnici('123 ne treba da racuna ');
 samoglasniciSuglasnici('abrakadabra');
+
+// Exercise 3 - Laksi nacin
+function isLetter(str) {
+    // return str.length --- 1 & str.match(/[a-z]/i);
+    if (str.match(/[a-z]/i)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function isVowel(str) {
+    // return str.length --- 1 && str.match(/[aeiou]/i);
+    if (str.match(/[aeiou]/i)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function countVowelsAndConsonants(word) {
+    if (!word || word.length == 0) {
+        return [];
+    }
+
+    var vowels = 0;
+    var consonants = 0;
+    for (let i = 0; i < word.length; i++) {
+        if (isLetter(word[i])) {
+            if (isVowel(word[i])) {
+                vowels++;
+            } else {
+                consonants++;
+            }
+        }
+    }
+
+    return [vowels, consonants];
+}
+
+
+var result = countVowelsAndConsonants('Danas je subota');
+console.log('Broj samoglasnika: ' + result[0] + ' Broj suglasnika: ' + result[1]);
 
 
 // Exercise 4 - Kreirati funkciju koja prihvata array, a na izlazu ispisuje niz koji sadrži tipove podataka pojedinačnih elemenata ulaznog niza.
@@ -192,7 +239,7 @@ razno('Computer');
 razno('Science');
 
 
-// Exercise 7 - Dat je ulazni niz [9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8] gde se svaki element ponavlja bar jednom osim dva elementa. Kreirati funkciju koja ispisuje dva elementa koja se ne ponavljaju.
+// Exercise 7 - Dat je ulazni niz [9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8] gde se svaki element ponavlja bar jednom osim dva elementa. Kreirati funkciju koja ispisuje sva elementa koja se ne ponavljaju.
 function nePonavljaSe(input) {
     var n_0 = 0;
     var n_1 = 0;
@@ -275,6 +322,55 @@ function nePonavljaSe(input) {
 var a = [9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8];
 nePonavljaSe(a);
 
+// Exercise 7 - Efikasniji nacin
+function nonRepeat(inputArray) {
+    if (!inputArray || inputArray.length == 0) {
+        return [];
+    }
+
+    var result = [];
+    for (var i = 0; i < inputArray.length; i++) {
+        for (var j = 0; j < inputArray.length; j++) {
+            if (inputArray[i] == inputArray[j] && i != j) {
+                break;
+            }
+        }
+
+        if (j == inputArray.length) {
+            result.push(inputArray[i]);        }
+    }
+
+    return result;
+}
+
+console.log(nonRepeat([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]));
+
+
+// Exercise 7 - Efikasniji nacin varijacija
+function nonRepeat(inputArray) {
+    if (!inputArray || inputArray.length == 0) {
+        return [];
+    }
+
+    var result = [];
+    for (var i = 0; i < inputArray.length; i++) {
+        var counter = 0;
+        for (var j = 0; j < inputArray.length; j++) {
+            if (inputArray[i] == inputArray[j] && i != j) {
+                counter++;
+            }
+        }
+
+        if (counter == 0) {
+            result.push(inputArray[i]);        }
+    }
+
+    return result;
+}
+
+console.log(nonRepeat([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]));
+
+
 
 // Exercise 8 - Kreirati funkciju koja ulazni niz deli u podnizove duzine N i ispisuje ih.
 // Primer 1: ([2, 3, 4, 5], N=2) => [[2, 3], [4, 5]]
@@ -299,3 +395,32 @@ podnizovi(a, 2);
 
 var b = [2, 3, 4, 5, 6];
 podnizovi(b, 3);
+
+
+// Vidi resenje i probaj i sa splice
+
+// Exercise 8 - Ispravan nacin
+function arraySplit(inputArray, count) {
+    if (!inputArray || !count || count == 1 || count > inputArray.length) {
+        return [];
+    }
+
+    var result = [];
+
+    for (var i = 0; i < inputArray.length; i += count) {
+        var smaller = [];
+        var z = i;
+        for (var j = 0; j < count; j++) {
+            if (inputArray[z]) {
+                smaller.push(inputArray[z]);
+                z++;
+            }
+        }
+
+        result.push(smaller);
+    }
+
+    return result;
+}
+
+console.log(arraySplit([2, 3, 4, 5, 6, 7, 8, 9, 10], 2));

@@ -1,0 +1,81 @@
+// --- Partial Files ---
+@import './partial';
+
+// --- Variables ---
+$primary-color: red;
+$secondary-color: blue;
+$accent-color: orange;
+$text-color: darkgrey;
+
+// --- Maps ---
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+// --- Functions ---
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+// --- Mixins ---
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($primary-color, $amount: 100%);
+        color: darken($text-color, $amount: 100%);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+body {
+    background: $primary-color;
+    color: $text-color;
+    font-weight: map-get($font-weights , bold);
+}
+
+// --- Nesting ---
+// --- & = zamena za parent ---
+.main {
+    @include flexCenter; // Poziv na @mixin
+    width: 80%;
+    margin: 0 auto;
+
+    p {
+        font-weight: map-get($font-weights , regular);
+    }
+
+    .main_paragraph {
+        color: $accent-color;
+
+        &:hover {
+            color: aquamarine;
+        }
+    }
+}
+
+.light {
+    @include theme($light-theme: true);
+    @include theme(true); // Moze i ovako
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+// --- Extend ---
+._paragraph2 {
+    @extend .main; // Isti content kao .main
+    // Ostali content koji se razlikuje
+}

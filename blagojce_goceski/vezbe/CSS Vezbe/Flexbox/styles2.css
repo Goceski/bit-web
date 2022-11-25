@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+#prvi {
+    background-color: rgb(241, 205, 149);
+    order: 1;
+}
+
+#drugi {
+    background-color: rgb(59, 49, 35);
+    order: 4;
+}
+
+#treci {
+    background-color: rgb(108, 108, 117);
+    order: 2;
+}
+
+#cetvrti {
+    background-color: rgb(241, 148, 71);
+    order: 5;
+}
+
+#peti {
+    background-color: rgb(219, 102, 194);
+    order: 3;
+}
+
+#sesti {
+    background-color: rgb(228, 89, 34);
+    order: 6;

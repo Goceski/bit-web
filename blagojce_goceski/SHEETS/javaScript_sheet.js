@@ -2,6 +2,29 @@
 // ---------- NUMBERS ----------
 // -----------------------------
 
+// Eliminacija na decimali ~~
+const num = Math.random()*100;
+console.log(num);   // Broj sa decimalama
+console.log(~~num); // Broj bez decimale
+
+
+// Zaokruzivanje decimala
+let n = 1.23456;
+alert( n.toFixed(2) ); // "1.23" string
+alert( +n.toFixed(2) ); // 1.23 number
+alert( Math.round(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23 number
+
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+console.log(getRandomInt(3));   // expected output: 0, 1 or 2
+console.log(getRandomInt(1));   // expected output: 0
+console.log(Math.random());     // expected output: a number from 0 to <1
+console.log(getRandomInt(101)); // expected output: a number from 0 to 100
+
+
 
 
 // Exponent power
@@ -84,7 +107,8 @@ console.log(filterArray); // [12, 34, "blabla"]
 // -----------------------------
 // --------- FUNCTIONS ---------
 // -----------------------------
-
+// -----FUNCTIONS ARE DATA------
+// -----------------------------
 
 
 // Write a function to find the element that occurs most frequently.
@@ -162,3 +186,36 @@ function my_log(...args) {
     // You can pass this array as parameters to another function
     console.log(...args);
 }
+
+// -----------------------------------
+// IMMEDIATE (SELF-INVOKING) FUNCTIONS
+// -----------------------------------
+(
+    function () {
+      console.log('boo');  
+    }   
+    )();
+
+
+    (
+        function (mood) {   
+        console.log(`Feeling ${mood}!`);
+        }
+        )('crazy');
+
+// An immediate function can also optionally return a value if you need one.
+var result = (
+    function () {
+      console.log('boo');
+      return true;  
+    }   
+    )();
+
+console.log(result);
+
+
+// When you pass a function, A, to another function, B,
+// and then B executes A, it's often said that A is a callback function.
+
+// If A doesn't have a name, then you can say that it's
+// an anonymous callback function.

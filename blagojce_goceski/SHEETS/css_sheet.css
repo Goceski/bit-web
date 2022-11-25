@@ -1,0 +1,268 @@
+/* ----------------------------- */
+/* ---------- FLEXBOX ---------- */
+/* ----------------------------- */
+.container {
+    display: flex;
+
+    flex-direction: column;
+    /* Razne opcije */
+
+    flex-wrap: wrap;
+    /* Razne opcije */
+
+    /* The two properties 'flex-direction' and 'flex-wrap' are used so often together that the shorthand property 'flex-flow' was created to combine them. This shorthand property accepts the value of the two properties separated by a space. */
+
+    justify-content: center;
+    /* Razne opcije za align HORIZONTALNO */
+
+    align-items: center;
+    /* Razne opcije za align VERTIKALNO */
+
+    align-content: ;
+    /* Space between lines */
+
+    /* Notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal. */
+
+    flex-wrap: row wrap
+}
+
+.container-items {
+    order: 0;
+    /* 1, 2, 3... Za interaktivni Website */
+
+    flex-grow: 0, 1, 2...;
+    flex-shrink: 0, 1, 2...;
+    flex-basis: 100px...;
+
+    flex: 1 1 100px;
+    /* Prethodna tri u jednom redu */
+
+    align-self: center;
+    /* Razne opcije za align VERTIKALNO */
+}
+
+/* PRIMER TEXT KOJ ZAUZIMA 100% NA MALIM EKRANIMA, A 50% NA VECIM */
+.text {
+    flex-basis: 100%;
+    padding: 0 2rem;
+
+    @media (min-width: 40rem) {
+        flex-basis: 50%;
+    }
+}
+
+/* SVI ELEMENTI KONTEJNERA DA BUDU ISTE SIRINE, SVIMA SE DODAJE */
+.container>* {
+    /* Selektiranje svih CHILD-ova */
+    flex-basis: 100%;
+}
+
+.container-items {
+    flex-basis: 100%;
+}
+
+.container>*:nth-child(1) {
+    /* Selektiranje 1-og CHILD-a */
+    flex-basis: 100%;
+}
+
+
+
+/* ----------------------------- */
+/* ----------- GRID ------------ */
+/* ----------------------------- */
+.container {
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+    /* Razne opcije auto, px, %, vw... */
+
+    grid-template-rows: auto auto auto;
+    /* Razne opcije auto, px, %, vh... */
+
+    justify-content: center;
+    /* Razne opcije za align HORIZONTALNO */
+
+    align-content: center;
+    /* Razne opcije za align VERTIKALNO */
+
+    column-gap: 150px;
+    row-gap: 150px;
+    gap: 150px 150px;
+}
+
+.container-items {
+    grid-column: 1 / 3;
+    /* Zauzima prostor od 1 i 2 do ispred 3-ce kolone */
+
+    grid-row: 1 / 3;
+    grid-row: 1 span 2;
+    /* Prethodna dva reda SU ISTA. Zauzima prostor od 1 i 2 do ispred 3-ceg reda */
+
+    grid-area: 2 / 1 / span2 / span 2;
+    /* Prethodna grid-column: i grid-row: u jednom zajednickom redu */
+}
+
+
+
+/* ----------------------------- */
+/* -------- ANIMATION ---------- */
+/* ----------------------------- */
+#item-koji-se-animira {
+    animation-name: naziv-animacije;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    /* alternate ide napred-nazad */
+
+    /* SHORTHAND */
+    animation: naziv-animacije 4s linear 2 1s alternate;
+
+    /* Za razne browsere */
+    -webkit-animation: naziv-animacije 4s linear 2 1s alternate;
+    -moz-animation: naziv-animacije 4s linear 2 1s alternate;
+    -ms-animation: naziv-animacije 4s linear 2 1s alternate;
+    -o-animation: naziv-animacije 4s linear 2 1s alternate;
+
+}
+
+@keyframes naziv-animacije {
+    0% {
+        /* PARAMETRI */
+    }
+
+    50% {
+        /* PARAMETRI */
+    }
+
+    100% {
+        /* PARAMETRI */
+    }
+}
+
+
+
+/* ----------------------------- */
+/* -------- DIV CENTER --------- */
+/* ----------------------------- */
+
+/* ----- 1. NACIN ----- */
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ----- 2. NACIN ----- */
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* ----- 3. NACIN ----- */
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+
+/* ----- 4. NACIN ----- */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {}
+
+
+/* ----- 5. NACIN ----- */
+.parent {
+    display: flex;
+    justify-content: center;
+}
+
+.child {
+    align-self: center;
+}
+
+
+/* ----- 6. NACIN ----- */
+.parent {
+    display: flex;
+}
+
+.child {
+    margin: auto;
+}
+
+
+/* ----- 7. NACIN ----- */
+.parent {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {}
+
+/* ----- 8. NACIN ----- */
+.parent {
+    display: grid;
+    place-items: center;
+}
+
+.child {}
+
+
+/* ----- 9. NACIN ----- */
+.parent {
+    display: grid;
+}
+
+.child {
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* ----- 10. NACIN ----- */
+.parent {
+    display: grid;
+}
+
+.child {
+    place-self: center;
+}
+
+
+/* ----- 11. NACIN ----- */
+.parent {
+    display: grid;
+}
+
+.child {
+    margin: auto;
+}

@@ -1,0 +1,50 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+}
+
+.parent2 {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+}
+
+#prvi {
+    order: 4;
+    background-color: rgb(233, 164, 85);
+    color: white;
+    font-size: 5rem;
+    width: 33vw;
+    height: 33vh;
+    align-self: flex-start;
+}
+
+#drugi {
+    order: 3;
+    background-color: rgb(189, 105, 8);
+    color: white;
+    font-size: 5rem;
+    width: 33vw;
+    height: 33vh;
+    align-self: flex-start;
+}
+
+#treci {
+    order: 2;
+    background-color: rgb(38, 38, 44);
+    color: white;
+    font-size: 5rem;
+    width: 33vw;
+    height: 33vh;
+    align-self: flex-start;
+}
+
+#cetvrti {
+    order: 1;
+    background-color: rgb(134, 107, 91);
+    color: white;
+    font-size: 5rem;
+    width: 66vw;
+    height: 99vh;
+    align-self: flex-start;
+}

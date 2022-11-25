@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: red;
+  color: darkgrey;
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main p {
+  font-weight: 400;
+}
+
+.main .main_paragraph {
+  color: orange;
+}
+
+.main .main_paragraph:hover {
+  color: aquamarine;
+}
+
+.light {
+  background: white;
+  color: black;
+  background: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .light {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styels.css.map */

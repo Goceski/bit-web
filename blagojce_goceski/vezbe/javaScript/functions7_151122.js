@@ -84,45 +84,66 @@ fahrenheitToCelsius(83);
 // ● Examples: validatePassword("P1zz@") ➞ false // Too short.
 // ● validatePassword("iLoveYou") ➞ false // Missing a number.
 // ● validatePassword("Fhg93@") ➞ true // OK!
-function validatePassword(input) {
+function validatePassword(password) {
 
-    if (input.length < 6) {
+    if (password.length < 6) {
         console.log("Too short");
         return false;
     } 
     
-    if (input.length > 24) {
+    if (password.length > 24) {
         console.log("Too long");
         return false;
     }
 
-    if (!/[A-Z]/.test(input)) {
+    if (!/[A-Z]/.test(password)) {
         console.log("Should contain at least one uppercase letter");
         return false;
     }
 
-    if (!/[a-z]/.test(input)) {
+    if (!/[a-z]/.test(password)) {
         console.log("Should contain at least one lowercase letter");
         return false;
     }
 
-    if (!/[0-9]/.test(input)) {
+    if (!/[0-9]/.test(password)) {
         console.log("Should contain at least one digit");
         return false;
     }
 
-    for (let i = 2; i < input.length; i++) {
-        if (input[i] == input[i-1] && input[i] == input[i-2]){
+    for (let i = 2; i < password.length; i++) {
+        if (password[i] == password[i-1] && password[i] == password[i-2]){
             console.log("Maximum of 2 repeated characters");
             return false;
         }
     }
 
 // ● Supported special characters: ! @ # $ % ^ & * ( ) + = _ - { } [ ] : ; " ' ? < > , .
-    return console.log("The password is correct");
+var specialChars = `! @ # $ % ^ & * ( ) + = _ - { } [ ] : ; " ' ? < > , .`;
+var usesSpecial = false;
+for (let i = 0; i < password.length; i++) {
+    if (!isLetter(password[i]) && isNaN(password[i]) && !specialChars.includes(password[i])) {
+        usesSpecial = true;
+        break;
+    }
+}
+
+return console.log("The password is correct");
 }
 
 validatePassword("AKHK0JDsfeegJGJKJ");
+
+// Exercise 5 - Drugaciji nacin
+// Check if contains a number
+function checkIfContainsNumber(password) {
+    for (let i = 0; i < password.length; i++) {
+        let parsed = Number(password[i]);
+        if(!isNaN(parsed)) {
+            return true;
+        }
+    }
+}
+
 
 
 // Exercise 6 - Create a function that finds how many prime numbers there are, up to the given integer.
@@ -131,7 +152,7 @@ validatePassword("AKHK0JDsfeegJGJKJ");
 // primeNumbers(30) ➞ 10 // 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29
 
 function isPrime(a) {
-    for (i = 2; i < a; i++) {
+    for (i = 2; i <= a; i++) {
         if (a % i == 0) {
             return false; // Not prime number
         }
@@ -140,20 +161,45 @@ function isPrime(a) {
 }
 
 function primeNumbers(input) {
-    let broj = 0;
-    let niz = [];
+    var broj = 0;
+    var niz = [];
     for (j = 2; j <= input; j++) {
         if (isPrime(j)) {
             broj++;
             niz.push(j);
         }
     }
+
     return console.log(broj + ' // ' + niz);
 }
 
 primeNumbers(10);
 primeNumbers(20);
 primeNumbers(30);
+
+
+//Exercise 6 - Efikasnije
+function primeNumbers(num) {
+    var result = [];
+    for (var i = 2; i <= num; i++) {
+        var notPrime = false;
+        for (var j = 2; j <= i; j++) {
+            if (i % j === 0 && i != j) {
+                notPrime = true;
+                break;
+            }
+        }
+
+        if (!notPrime) {
+            result.push(i);
+        }
+    }
+
+    console.log(`There are ${result.length} prime numbers: ` + result);
+}
+
+primeNumbers(19);
+
 
 
 // Exercise 7 - Create a function that returns an array that expands by 1 from 1 to the value of the input, and then reduces back to 1. Items in the arrays will be the same as the length of the arrays.
@@ -180,4 +226,26 @@ function diamondArrays(input) {
 
 console.log(diamondArrays(1));
 console.log(diamondArrays(2));
+console.log(diamondArrays(5));
+
+// Exercise 7 - Drugi nacin slicno
+function fillAray(result, i) {
+    for (var j = 1; j <= i; j++) {
+        result.push(i);
+    }
+}
+
+function diamondArrays(num) {
+    var result = [];
+    for (var i = 1; i <= num; i++) {
+        fillAray(result, i);
+    }
+
+    for (var i = num - 1; i >=1; i--) {
+        fillAray(result,i);
+    }
+
+    return result;
+}
+
 console.log(diamondArrays(5));
