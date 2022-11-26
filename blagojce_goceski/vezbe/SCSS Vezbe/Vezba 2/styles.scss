@@ -1,0 +1,97 @@
+@import './mixins';
+
+
+main {
+    width: 90%;
+
+    ul {
+        @include flexCenter(column);
+        gap: 10px;
+
+        li {
+            @include flexCenter(row);
+            list-style: none;
+
+            a {
+                width: 250px;
+                height: 35px;
+                border-radius: 7px;
+                padding-top: 10px;
+                padding-left: 20px;
+                text-decoration: none;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: normal;
+                color: black;
+
+                &.important {
+                    font-weight: bold;
+                }
+
+                &:link {
+                    background-color: green;
+                }
+
+                &:visited {
+                    background-color: orange;
+                }
+
+                &:hover {
+                    background-color: pink;
+                }
+
+                &:active {
+                    background-color: yellow;
+                }
+            }
+        }
+    }
+}
+
+.prvi {
+    width: 90%;
+    @include flexCenter(row);
+
+    p {
+        width: 23vw;
+        margin-left: 10px;
+
+        &.p-1 {
+            @include backgroundColor(1);
+        }
+
+        &.p-2 {
+            @include backgroundColor(2);
+        }
+
+        &.p-3 {
+            @include backgroundColor(3);
+        }
+
+        &.p-4 {
+            @include backgroundColor(4);
+        }
+    }
+}
+
+
+@for $i from 1 through 4 {
+    .p-#{$i} {
+        font-size: 14px + $i*2;
+    }
+}
+
+
+.drugi {
+    width: 90%;
+    @include flexCenter(row);
+
+    .p-5 {
+        background-color: lightblue;
+        @include boxSizing(content)
+    }
+
+    .p-6 {
+        background-color: lightseagreen;
+        @include boxSizing(border)
+    }
+}

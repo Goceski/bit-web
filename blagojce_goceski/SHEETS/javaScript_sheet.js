@@ -219,3 +219,17 @@ console.log(result);
 
 // If A doesn't have a name, then you can say that it's
 // an anonymous callback function.
+
+
+
+
+
+
+// -----------------------------
+// ----------- RAZNO -----------
+// -----------------------------
+
+
+// Danasnji datum
+let today = new Date().toISOString().slice(0, 10)
+console.log(today)

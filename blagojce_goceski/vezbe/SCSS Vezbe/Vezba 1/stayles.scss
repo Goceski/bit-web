@@ -1,0 +1,60 @@
+@import './colors';
+@import './mixins';
+
+$width: 25%;
+
+.parent {
+    @include flexCenter(column);
+    width: 90%;
+    height: 200px;
+    margin: auto auto;
+    gap: 10px;
+
+    .child-1 {
+        @include flexCenter(row);
+        width: $width;
+        height: 200px;
+        background-color: $color-1;
+        color: $font-color;
+    }
+
+    .child-2 {
+        @include flexCenter(row);
+        width: calc(25% + $width);
+        height: 200px;
+        background-color: $color-2;
+        color: $font-color;
+    }
+
+    .child-3 {
+        @include flexCenter(row);
+        width: calc($width + 50%);
+        height: 200px;
+        background-color: $color-3;
+        color: $font-color;
+    }
+}
+
+article {
+    @include flexCenter(row);
+
+    .p1 {
+        display: block;
+        width: 25%;
+        height: 25vh;
+        margin: 20px 10px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 5px solid $color-1;
+    }
+
+    .p2 {
+        @extend .p1;
+        border: 5px dashed $color-2;
+    }
+
+    .p3 {
+        @extend .p1;
+        border: 5px dotted $color-3;
+    }
+}

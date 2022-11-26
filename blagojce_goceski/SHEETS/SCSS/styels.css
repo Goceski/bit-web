@@ -10,23 +10,20 @@ body {
   font-weight: 700;
 }
 
-.main {
+.main, ._paragraph2 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   margin: 0 auto;
 }
-
-.main p {
+.main p, ._paragraph2 p {
   font-weight: 400;
 }
-
-.main .main_paragraph {
+.main .main_paragraph, ._paragraph2 .main_paragraph {
   color: orange;
 }
-
-.main .main_paragraph:hover {
+.main .main_paragraph:hover, ._paragraph2 .main_paragraph:hover {
   color: aquamarine;
 }
 
@@ -36,11 +33,8 @@ body {
   background: white;
   color: black;
 }
-
 @media (max-width: 768px) {
   .light {
     flex-direction: column;
   }
-}
-
-/*# sourceMappingURL=styels.css.map */
+}/*# sourceMappingURL=styels.css.map */

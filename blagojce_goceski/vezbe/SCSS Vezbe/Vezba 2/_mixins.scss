@@ -1,0 +1,34 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin backgroundColor($i) {
+    @if $i==1 {
+        background-color: lightblue;
+    }
+
+    @else if $i==2 {
+        background-color: lightcoral;
+    }
+
+    @else if $i==3 {
+        background-color: lightgreen;
+    }
+
+    @else {
+        background-color: lightslategray;
+    }
+}
+
+@mixin boxSizing($n) {
+    @if $n=='border' {
+        box-sizing: border-box;
+    }
+
+    @else if $n=='content' {
+        box-sizing: content-box;
+    }
+}
