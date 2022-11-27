@@ -1,0 +1,10 @@
+@mixin floatLeft {
+    position: relative;
+    float: left;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

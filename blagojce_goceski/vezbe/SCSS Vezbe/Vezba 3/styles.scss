@@ -1,0 +1,178 @@
+@import './colors';
+@import './mixins';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#prvalista {
+    width: 960px;
+    height: 25px;
+    background-color: $color-red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & a {
+        color: $color-white;
+        text-decoration: none;
+        margin-right: 15px;
+
+        &#home,
+        &#about,
+        &#contact,
+        &#blog {
+            float: right;
+        }
+    }
+}
+
+.kontejner {
+    width: 960px;
+    position: relative;
+
+    #div1,
+    #div2 {
+        width: 480px;
+        height: 500px;
+        background-color: $color-orange;
+        float: left;
+    }
+
+    #div2 {
+        background-color: $color-light-blue;
+    }
+
+    img {
+        @include floatLeft;
+        height: 275px;
+        left: 250px;
+        top: -400px;
+    }
+
+    #div3 {
+        @include floatLeft;
+        width: 300px;
+        height: 200px;
+        background-color: $color-red;
+        clear: left;
+        margin-left: 15px;
+        top: -260px;
+    }
+
+    #div4 {
+        @include floatLeft;
+        width: 300px;
+        height: 200px;
+        background-color: $color-dark-blue;
+        margin-left: 15px;
+        top: -260px;
+    }
+
+    .align {
+        color: $color-white;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        @include flexCenter;
+    }
+
+    #drugalista {
+        @include floatLeft;
+        width: 300px;
+        height: 250px;
+        background-color: $color-yellow;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        list-style-type: none;
+        text-align: left;
+        font-size: 20px;
+        margin-left: 30px;
+        top: -270px;
+
+        .boja {
+            color: $color-dark-blue;
+        }
+    }
+
+    #p1 {
+        clear: left;
+    }
+
+    #p1,
+    #p2 {
+        @include floatLeft;
+        width: 300px;
+        margin-left: 15px;
+        top: -300px;
+    }
+
+    #div5,
+    #div6,
+    #div7 {
+        @include floatLeft;
+        width: 300px;
+        height: 200px;
+        background-color: $color-green;
+        margin-left: 15px;
+        top: -290px;
+    }
+
+    #div5 {
+        background-color: $color-yellow;
+        clear: left;
+    }
+
+    #div7 {
+        background-color: $color-red;
+    }
+
+    #p3 {
+        clear: left;
+    }
+
+    #p3,
+    #p4,
+    #p5 {
+        @include floatLeft;
+        width: 300px;
+        margin-left: 15px;
+        top: -280px;
+    }
+
+    #div8,
+    #div9,
+    #div10 {
+        @include floatLeft;
+        width: 300px;
+        height: 200px;
+        background-color: $color-yellow;
+        margin-left: 15px;
+        top: -260px;
+    }
+
+    #div8 {
+        background-color: $color-dark-blue;
+        clear: left;
+    }
+
+    #div10 {
+        background-color: $color-green;
+    }
+
+    #p6 {
+        clear: left;
+    }
+
+    #p6,
+    #p7,
+    #p8 {
+        @include floatLeft;
+        width: 300px;
+        margin-left: 15px;
+        top: -250px;
+    }
+}
