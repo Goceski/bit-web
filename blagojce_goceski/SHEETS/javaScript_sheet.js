@@ -222,6 +222,123 @@ console.log(result);
 
 
 
+// -----------------------------
+// --------- MAP & SET ---------
+// -----------------------------
+new Map()           // – creates the map.
+map.set(key, value) // – stores the value by the key.
+map.get(key)        // – returns the value by the key, undefined if key doesn’t exist in map.
+map.has(key)        // – returns true if the key exists, false otherwise.
+map.delete(key)     // – removes the element (the key/value pair) by the key.
+map.clear()         // – removes everything from the map.
+map.size            // – returns the current element count.
+
+// Iteration over Map
+//For looping over a map, there are 3 methods:
+map.keys()          // – returns an iterable for keys,
+map.values()        // – returns an iterable for values,
+map.entries()       // – returns an iterable for entries [key, value], it’s used by default in for..of.
+
+
+// A Set is a special type collection – “set of values” (without keys), where each value may occur only once.
+// Its main methods are:
+new Set([iterable])  // – creates the set, and if an iterable object is provided (usually an array), copies values from it into the set.
+set.add(value)       // – adds a value, returns the set itself.
+set.delete(value)    // – removes the value, returns true if value existed at the moment of the call, otherwise false.
+set.has(value)       // – returns true if the value exists in the set, otherwise false.
+set.clear()          // – removes everything from the set.
+set.size             // – is the elements count.
+//The main feature is that repeated calls of set.add(value) with the same value don’t do anything. That’s the reason why each value appears in a Set only once.
+// For example, we have visitors coming, and we’d like to remember everyone. But repeated visits should not lead to duplicates. A visitor must be “counted” only once.
+
+
+// WeakMap
+//The first difference between Map and WeakMap is that keys must be objects, not primitive values.
+// WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.
+// WeakMap has only the following methods:
+weakMap.set(key, value)
+weakMap.get(key)
+weakMap.delete(key)
+weakMap.has(key)
+
+// WeakSet
+// WeakSet behaves similarly:
+// It is analogous to Set, but we may only add objects to WeakSet (not primitives).
+// An object exists in the set while it is reachable from somewhere else.
+// Like Set, it supports add, has and delete, but not size, keys() and no iterations.
+// Being “weak”, it also serves as additional storage. But not for arbitrary data, rather for “yes/no” facts. A membership in WeakSet may mean something about the object.
+// For instance, we can add users to WeakSet to keep track of those who visited our site.
+
+
+// Object.keys, values, entries
+// For plain objects, the following methods are available:
+Object.keys(obj)    // – returns an array of keys.
+Object.values(obj)  // – returns an array of values.
+Object.entries(obj) // – returns an array of [key, value] pairs.
+Object.fromEntries(array) // on the resulting array to turn it back into an object.
+
+
+
+
+// ----------------------------------
+// ---- Destructuring assignment ----
+// ----------------------------------
+// Destructuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that’s more convenient.
+
+// Array destructuring
+// Example 1
+// we have an array with the name and surname
+let arr = ["John", "Smith"]
+// destructuring assignment
+// sets firstName = arr[0]
+// and surname = arr[1]
+let [firstName, surname] = arr;
+alert(firstName); // John
+alert(surname);  // Smith
+
+// Example 2
+let [firstName, surname] = "John Smith".split(' ');
+alert(firstName); // John
+alert(surname);  // Smith
+
+// Example 3
+// Usually, if the array is longer than the list at the left, the “extra” items are omitted.
+// If we’d like also to gather all that follows – we can add one more parameter that gets “the rest” using three dots "...":
+let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+// rest is array of items, starting from the 3rd one
+alert(rest[0]); // Consul
+alert(rest[1]); // of the Roman Republic
+alert(rest.length); // 2
+
+
+// Object destructuring
+// Basic syntax:
+let {var1, var2} = {var1:…, var2:…}
+
+// Example 1
+let options = {
+    title: "Menu",
+    width: 100,
+    height: 200
+  };
+  let {title, width, height} = options;
+  alert(title);  // Menu
+  alert(width);  // 100
+  alert(height); // 200
+
+// Example 2
+let options = {
+    title: "Menu",
+    height: 200,
+    width: 100
+  };
+  // title = property named title
+  // rest = object with the rest of properties
+  let {title, ...rest} = options;
+  // now title="Menu", rest={height: 200, width: 100}
+  alert(rest.height);  // 200
+  alert(rest.width);   // 100
+
 
 
 
@@ -233,3 +350,7 @@ console.log(result);
 // Danasnji datum
 let today = new Date().toISOString().slice(0, 10)
 console.log(today)
+console.log(typeof today) // String
+
+
+

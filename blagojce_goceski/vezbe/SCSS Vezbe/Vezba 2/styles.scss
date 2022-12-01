@@ -1,5 +1,9 @@
 @import './mixins';
 
+@function column-width($ukupna-sirina, $broj-kolona) {
+    @return $ukupna-sirina / $broj-kolona;
+}
+
 
 main {
     width: 90%;
@@ -93,5 +97,18 @@ main {
     .p-6 {
         background-color: lightseagreen;
         @include boxSizing(border)
+    }
+}
+
+.tabela {
+    width: 90vw;
+    display: flex;
+
+    table {
+        margin: auto;
+
+        td {
+            width: column-width(70vw, 5);
+        }
     }
 }
