@@ -1,0 +1,1177 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@import './colors';
+@import './fonts';
+
+@mixin flexCenter($direction, $position1, $position2) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $position1;
+    align-items: $position2;
+}
+
+/*************************************************/
+/*********** MOBILE PHONE CSS SETTINGS ***********/
+/*************************************************/
+
+@media only screen and (max-width: 767px) {
+
+    header {
+        @include flexCenter(column, center, center);
+        width: 100vw;
+        padding-top: 20px;
+
+        #logolevo {
+            font-family: "Roboto Bold";
+            color: $color-orange;
+            font-size: 1.2rem;
+            border: 3px solid $color-grey;
+            border-right: none;
+            padding-left: 10px;
+        }
+
+        #logodesno {
+            font-family: "Roboto Bold";
+            color: $color-grey;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            @include flexCenter(column, center, center);
+            background-color: $light-blue;
+            width: 85vw;
+            margin-top: 10px;
+            margin-bottom: 5vw;
+        }
+
+        a {
+            margin: 1.5%;
+            color: white;
+            font-family: "Roboto Bold";
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 0.1rem;
+            transition: all 0.4s;
+
+            &:hover {
+                color: white;
+                letter-spacing: 0.4rem;
+            }
+        }
+
+        #prvi {
+            @include flexCenter(column, center, center);
+            background-image: url("./images/banner3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 50vw;
+            padding-top: 2.2rem;
+        }
+
+        h2 {
+            color: white;
+            font-family: "Roboto Light";
+            overflow-wrap: normal;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 4.5vw;
+            letter-spacing: 0.2rem;
+        }
+
+        button {
+            background-color: $button-background;
+            color: white;
+            font-family: "Roboto Light";
+            font-size: 0.65rem;
+            letter-spacing: 0.15rem;
+            height: 2rem;
+            padding: 0 1.2rem;
+            margin-top: 1rem;
+            border-radius: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    main {
+        @include flexCenter(column, center, center);
+        width: 100vw;
+        padding-top: 20px;
+
+        .border {
+            width: 100%;
+            text-align: center;
+
+            .line {
+                display: inline-block;
+                height: 10px;
+                width: 35px;
+                border-top: 2px solid black;
+            }
+
+            .square {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid black;
+                transform: rotate(45deg);
+                position: relative;
+                top: -5px;
+            }
+        }
+
+        h3 {
+            font-family: "Roboto Light";
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+            margin-top: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #article-prvi {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 85vw;
+
+            .container {
+                width: 90%;
+            }
+
+            h4 {
+                color: $light-blue;
+                font-family: "Roboto Light";
+                font-size: 0.9rem;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .sirina {
+                font-family: "Roboto Light";
+                font-size: 0.8rem;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                list-style-image: url("./images/arrow_bullet.png");
+            }
+
+            li {
+                font-family: "Roboto Light";
+                font-size: 0.8rem;
+                margin: 10px 0px;
+                margin-left: 20px;
+            }
+
+            #img_about {
+                margin-top: 20px;
+                width: 85vw;
+            }
+        }
+
+        #article-drugi {
+            @include flexCenter(column, center, center);
+
+            .review {
+                @include flexCenter(column, center, flex-start);
+                width: 80%;
+                background-color: $light-blue;
+                margin-top: 12px;
+                padding: 15px;
+                margin-right: 30px;
+                margin-left: 30px;
+
+                p {
+                    color: white;
+                    font-family: "Roboto Light";
+                    font-size: 0.8rem;
+                    line-height: 25px;
+                }
+
+                .slika_zvezdice {
+                    @include flexCenter(row, center, flex-start);
+
+                    .reviewers {
+                        width: 50px;
+                        height: 50px;
+                        border: 2px solid white;
+                        border-radius: 50px;
+                        padding: 3px;
+                    }
+
+                    .imeirejting {
+                        @include flexCenter(column, center, flex-start);
+
+                        h5 {
+                            font-family: "Roboto Bold";
+                            font-size: 0.9rem;
+                            line-height: 25px;
+                            margin-left: 15px;
+                            margin-top: 5px;
+                        }
+
+                        .zvezdice {
+                            width: 5rem;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            .zadnji {
+                background-color: white;
+            }
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100vw;
+            padding-top: 20px;
+
+            #contact1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: $contact-green;
+                width: 50vw;
+                height: 40vw;
+            }
+
+            .contact_flex2 {
+                @include flexCenter(row, center, center);
+            }
+
+            .contact_flex2>img {
+                filter: invert(100%);
+                width: 25px;
+                margin-right: 5px;
+            }
+
+            #contact2 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-red;
+                width: 50vw;
+                height: 40vw;
+            }
+
+            #contact3 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-blue;
+                width: 50vw;
+                height: 40vw;
+            }
+
+            #contact4 {
+                background-color: $light-blue;
+                width: 50vw;
+                height: 40vw;
+
+                img {
+                    width: 50vw;
+                    height: 40vw;
+                    padding-bottom: 30px;
+                }
+            }
+
+            .h_contact {
+                color: white;
+                font-family: "Roboto Light";
+                font-size: 1rem;
+                margin-top: 10vw;
+                margin-bottom: 15px;
+            }
+
+            .contact_p {
+                font-family: "Roboto Regular";
+                color: white;
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+            }
+
+            .img_connect {
+                filter: invert(100%);
+                width: 15px;
+            }
+
+            .dugme {
+                background-color: $contact-red;
+                border-radius: 0px;
+                width: 30px;
+                color: white;
+                font-family: "Roboto Light";
+                border: none;
+                cursor: pointer;
+            }
+
+            #connect_flex {
+                @include flexCenter(row, flex-start, center);
+            }
+        }
+
+        form {
+            width: 95vw;
+
+            fieldset {
+                margin-top: 15px;
+                border: none;
+
+                .form-input {
+                    @include flexCenter(column, center, center);
+                }
+
+                input {
+                    margin-top: 20px;
+                    width: 85vw;
+                    padding: 10px;
+                    font-family: "Roboto Regular";
+                }
+
+                textarea {
+                    width: 85vw;
+                    padding: 10px;
+                    font-family: "Roboto Regular";
+                }
+
+                #submit {
+                    align-self: flex-start;
+                    background-color: $color-orange;
+                    color: white;
+                    border: none;
+                    width: 20vw;
+                    margin-bottom: 40px;
+                    cursor: pointer;
+                    margin-left: 2vw;
+                }
+            }
+        }
+    }
+
+    footer {
+        @include flexCenter(column, center, center);
+        background-color: black;
+        color: white;
+        font-family: "Roboto Regular";
+        font-size: 0.75rem;
+        width: 100vw;
+        height: 15vh;
+
+        #footer_list {
+            @include flexCenter(row, center, center);
+        }
+
+        .a_footer {
+            color: white;
+            text-decoration: none;
+            font-family: "Roboto Bold";
+            margin: 0px 10px;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+
+        h6 {
+            color: white;
+            font-family: "Roboto Regular";
+            font-size: 0.7rem;
+            margin-top: 20px;
+        }
+    }
+
+}
+
+
+/*************************************************/
+/************** TABLET CSS SETTINGS **************/
+/*************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    header {
+        @include flexCenter(column, center, center);
+        width: 100vw;
+
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+
+        #logolevo {
+            font-family: "Roboto Bold";
+            color: $color-orange;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            border-right: none;
+            padding-left: 10px;
+        }
+
+        #logodesno {
+            font-family: "Roboto Bold";
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        #navigacija {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav {
+            color: white;
+            @include flexCenter(row, flex-end, center);
+            width: 85vw;
+            margin-right: 1vw;
+        }
+
+        a {
+            margin: 1.5%;
+            color: white;
+            font-family: "Roboto Bold";
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            transition: all 0.4s;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+
+        #prvi {
+            @include flexCenter(column, center, center);
+            background-image: url("./images/banner3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 50vw;
+            padding-top: 2.2rem;
+        }
+
+        h2 {
+            color: white;
+            font-family: "Roboto Light";
+            overflow-wrap: normal;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 4.5vw;
+            letter-spacing: 0.2rem;
+        }
+
+        button {
+            background-color: $button-background;
+            color: white;
+            font-family: "Roboto Light";
+            font-size: 0.65rem;
+            letter-spacing: 0.15rem;
+            height: 2rem;
+            padding: 0 1.2rem;
+            margin-top: 1rem;
+            border-radius: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    main {
+        @include flexCenter(column, center, center);
+        width: 100vw;
+        padding-top: 20px;
+
+        .border {
+            width: 100%;
+            text-align: center;
+
+            .line {
+                display: inline-block;
+                height: 10px;
+                width: 35px;
+                border-top: 2px solid black;
+            }
+
+            .square {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid black;
+                transform: rotate(45deg);
+                position: relative;
+                top: -5px;
+            }
+        }
+
+        h3 {
+            font-family: "Roboto Light";
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+            margin-top: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #article-prvi {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 100vw;
+            margin-top: 15px;
+        }
+
+        #article-prvi>:nth-child(1) {
+            width: 40vw;
+            margin-left: 10vw;
+        }
+
+        #article-prvi>:nth-child(2) {
+            width: 50vw;
+        }
+
+        #article-prvi>:nth-child(3) {
+            flex-grow: 1;
+            max-width: 70vw;
+            margin-left: 10vw;
+        }
+
+        .container {
+            width: 90%;
+        }
+
+        h4 {
+            color: $light-blue;
+            font-family: "Roboto Light";
+            font-size: 1.2rem;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .sirina {
+            font-family: "Roboto Light";
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            padding-right: 20px;
+        }
+
+        ul {
+            list-style-image: url("./images/arrow_bullet.png");
+        }
+
+        li {
+            font-family: "Roboto Light";
+            font-size: 0.9rem;
+            margin: 10px 0px;
+            margin-left: 20px;
+        }
+
+        #img_about {
+            width: 35vw;
+        }
+
+        #article-drugi {
+            margin-top: 20px;
+            width: 77vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2vw;
+
+            .review {
+                flex-basis: 33vw;
+                height: 30vw;
+                background-color: $light-blue;
+                padding: 15px;
+
+                p {
+                    color: white;
+                    font-family: "Roboto Light";
+                    font-size: 1.05rem;
+                    line-height: 2rem;
+                }
+
+                .slika_zvezdice {
+                    @include flexCenter(row, flex-start, flex-start);
+
+                    .reviewers {
+                        width: 10vw;
+                        height: 10vw;
+                        border: 2px solid white;
+                        border-radius: 10vw;
+                        padding: 3px;
+                    }
+
+                    .imeirejting {
+                        @include flexCenter(column, center, flex-start);
+
+                        h5 {
+                            font-family: "Roboto Bold";
+                            font-size: 1rem;
+                            line-height: 25px;
+                            margin-left: 15px;
+                            margin-top: 5px;
+                        }
+
+                        .zvezdice {
+                            width: 5rem;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            .zadnji {
+                background-color: white;
+            }
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100vw;
+            padding-top: 20px;
+
+            #contact1 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-green;
+                width: 50vw;
+                height: 30vw;
+            }
+
+            .contact_flex2 {
+                @include flexCenter(row, center, center);
+            }
+
+            .contact_flex2>img {
+                filter: invert(100%);
+                width: 25px;
+                margin-right: 5px;
+            }
+
+            #contact2 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-red;
+                width: 50vw;
+                height: 30vw;
+            }
+
+            #contact3 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-blue;
+                width: 50vw;
+                height: 30vw;
+            }
+
+            #contact4 {
+                background-color: $light-blue;
+                width: 50vw;
+                height: 30vw;
+
+                img {
+                    margin-left: 7vw;
+                    width: 40vw;
+                    height: 30vw;
+                    padding-bottom: 30px;
+                }
+            }
+
+            .h_contact {
+                color: white;
+                font-family: "Roboto Light";
+                font-size: 1.2rem;
+                margin-top: 10vw;
+                margin-bottom: 15px;
+            }
+
+            .contact_p {
+                font-family: "Roboto Regular";
+                color: white;
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+
+            .img_connect {
+                filter: invert(100%);
+                width: 15px;
+            }
+
+            .dugme {
+                background-color: $contact-red;
+                border-radius: 0px;
+                width: 30px;
+                color: white;
+                font-family: "Roboto Light";
+                border: none;
+                cursor: pointer;
+            }
+
+            #connect_flex {
+                @include flexCenter(row, flex-start, center);
+            }
+        }
+
+        form {
+            fieldset {
+                margin-top: 15px;
+                border: none;
+            }
+
+            fieldset>:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            input {
+                min-width: 200px;
+                padding: 10px;
+                font-family: "Roboto Regular";
+            }
+
+            textarea {
+                min-width: 669px;
+                flex-grow: 1;
+                padding: 10px;
+                font-family: "Roboto Regular";
+            }
+
+            #submit {
+                background-color: $color-orange;
+                color: white;
+                border: none;
+                min-width: 120px;
+                margin-top: 20px;
+                margin-bottom: 50px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    footer {
+        @include flexCenter(column, center, center);
+        background-color: black;
+        color: white;
+        font-family: "Roboto Regular";
+        font-size: 0.75rem;
+        width: 100vw;
+        height: 15vh;
+
+        #footer_list {
+            @include flexCenter(row, center, center);
+        }
+
+        .a_footer {
+            color: white;
+            text-decoration: none;
+            font-family: "Roboto Bold";
+            margin: 0px 10px;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+
+        h6 {
+            color: white;
+            font-family: "Roboto Regular";
+            font-size: 0.7rem;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+/*************************************************/
+/************* DESKTOP CSS SETTINGS **************/
+/*************************************************/
+
+@media only screen and (min-width: 1200px) {
+
+    header {
+        @include flexCenter(column, center, center);
+        width: 100vw;
+
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+
+        #logolevo {
+            font-family: "Roboto Bold";
+            color: $color-orange;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            border-right: none;
+            padding-left: 10px;
+        }
+
+        #logodesno {
+            font-family: "Roboto Bold";
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        #navigacija {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav {
+            color: white;
+            @include flexCenter(row, flex-end, center);
+            width: 85vw;
+            margin-right: 4vw;
+        }
+
+        a {
+            margin: 1.5%;
+            color: white;
+            font-family: "Roboto Bold";
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.1rem;
+            transition: all 0.4s;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+
+        #prvi {
+            @include flexCenter(column, center, center);
+            background-image: url("./images/banner3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 50vw;
+            padding-top: 2.2rem;
+        }
+
+        h2 {
+            color: white;
+            font-family: "Roboto Light";
+            overflow-wrap: normal;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 3vw;
+            letter-spacing: 0.2rem;
+        }
+
+        button {
+            background-color: $button-background;
+            color: white;
+            font-family: "Roboto Light";
+            font-size: 0.75rem;
+            letter-spacing: 0.15rem;
+            height: 2rem;
+            padding: 0 1.2rem;
+            margin-top: 1rem;
+            border-radius: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    main {
+        @include flexCenter(column, center, center);
+        width: 100vw;
+        padding-top: 20px;
+
+        .border {
+            width: 100%;
+            text-align: center;
+
+            .line {
+                display: inline-block;
+                height: 10px;
+                width: 100px;
+                border-top: 2px solid black;
+            }
+
+            .square {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid black;
+                transform: rotate(45deg);
+                position: relative;
+                top: -5px;
+            }
+        }
+
+        h3 {
+            font-family: "Roboto Light";
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+            margin-top: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #article-prvi {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 80vw;
+            margin-top: 15px;
+            gap: 20px;
+        }
+
+
+        #img_about {
+            width: 220px;
+        }
+
+        h4 {
+            color: $light-blue;
+            font-family: "Roboto Light";
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .sirina {
+            font-family: "Roboto Light";
+            width: 270px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-image: url("./images/arrow_bullet.png");
+        }
+
+        li {
+            font-family: "Roboto Light";
+            font-size: 1rem;
+            margin: 10px 0px;
+            margin-left: 20px;
+        }
+
+        #article-drugi {
+            margin-top: 20px;
+            width: 90vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2vw;
+
+            .review {
+                flex-basis: 35vw;
+                height: 17vw;
+                background-color: $light-blue;
+                padding-top: 2vw;
+                padding-left: 2vw;
+
+                p {
+                    color: white;
+                    font-family: "Roboto Light";
+                    font-size: 0.9rem;
+                    line-height: 1.7rem;
+                    padding-right: 7px;
+                }
+
+                .slika_zvezdice {
+                    @include flexCenter(row, flex-start, flex-start);
+
+                    .reviewers {
+                        width: 6vw;
+                        height: 6vw;
+                        border: 2px solid white;
+                        border-radius: 10vw;
+                        padding: 3px;
+                    }
+
+                    .imeirejting {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        margin-top: 20px;
+
+                        h5 {
+                            font-family: "Roboto Bold";
+                            font-size: 0.9rem;
+                            line-height: 25px;
+                            margin-left: 15px;
+                            margin-top: 5px;
+                        }
+
+                        .zvezdice {
+                            width: 5rem;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            .zadnji {
+                display: none;
+                background-color: white;
+            }
+
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            padding-top: 20px;
+
+            #contact1 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-green;
+                width: 25vw;
+                height: 15vw;
+            }
+
+            .contact_flex2 {
+                @include flexCenter(row, center, center);
+            }
+
+            .contact_flex2>img {
+                filter: invert(100%);
+                width: 25px;
+                margin-right: 5px;
+            }
+
+            #contact2 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-red;
+                width: 25vw;
+                height: 15vw;
+            }
+
+            #contact3 {
+                @include flexCenter(column, flex-start, center);
+                background-color: $contact-blue;
+                width: 25vw;
+                height: 15vw;
+            }
+
+            #contact4 {
+                background-color: $light-blue;
+                width: 25vw;
+                height: 15vw;
+
+                img {
+                    width: 20vw;
+                    height: 15vw;
+                    margin-left: 3vw;
+                    padding-bottom: 30px;
+                }
+            }
+
+            .h_contact {
+                color: white;
+                font-family: "Roboto Light";
+                font-size: 1rem;
+                margin-top: 4vw;
+                margin-bottom: 15px;
+            }
+
+            .contact_p {
+                font-family: "Roboto Regular";
+                color: white;
+                font-size: 1rem;
+                line-height: 1.75rem;
+            }
+
+            .img_connect {
+                filter: invert(100%);
+                width: 15px;
+            }
+
+            .dugme {
+                background-color: $contact-red;
+                border-radius: 0px;
+                width: 30px;
+                color: white;
+                font-family: "Roboto Light";
+                border: none;
+                cursor: pointer;
+            }
+
+            #connect_flex {
+                @include flexCenter(row, flex-start, center);
+            }
+        }
+
+        form {
+            fieldset {
+                margin-top: 15px;
+                border: none;
+            }
+
+            fieldset>:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            input {
+                min-width: 200px;
+                padding: 10px;
+                font-family: "Roboto Regular";
+            }
+
+            textarea {
+                min-width: 680px;
+                flex-grow: 1;
+                padding: 10px;
+                font-family: "Roboto Regular";
+            }
+
+            #submit {
+                background-color: $color-orange;
+                color: white;
+                border: none;
+                min-width: 120px;
+                margin-top: 20px;
+                margin-bottom: 50px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    footer {
+        @include flexCenter(column, center, center);
+        background-color: black;
+        color: white;
+        font-family: "Roboto Regular";
+        font-size: 0.75rem;
+        width: 100vw;
+        height: 15vh;
+
+        #footer_list {
+            @include flexCenter(row, center, center);
+        }
+
+        .a_footer {
+            color: white;
+            text-decoration: none;
+            font-family: "Roboto Bold";
+            margin: 0px 10px;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+
+        h6 {
+            color: white;
+            font-family: "Roboto Regular";
+            font-size: 0.7rem;
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .card {
+  height: 25rem;
+  margin: 10px 10px;
+  position: relative;
+}
+main .card img {
+  padding: 10px 10px;
+}/*# sourceMappingURL=styles.css.map */

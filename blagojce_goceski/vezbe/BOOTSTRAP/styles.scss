@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        height: 25rem;
+        margin: 10px 10px;
+        position: relative;
+
+        img {
+            padding: 10px 10px;
+        }
+    }
+}

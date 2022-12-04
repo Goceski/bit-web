@@ -1,7 +1,6 @@
 main {
   width: 90%;
 }
-
 main ul {
   display: flex;
   justify-content: center;
@@ -9,7 +8,6 @@ main ul {
   flex-direction: column;
   gap: 10px;
 }
-
 main ul li {
   display: flex;
   justify-content: center;
@@ -17,7 +15,6 @@ main ul li {
   flex-direction: row;
   list-style: none;
 }
-
 main ul li a {
   width: 250px;
   height: 35px;
@@ -29,23 +26,18 @@ main ul li a {
   font-weight: normal;
   color: black;
 }
-
 main ul li a.important {
   font-weight: bold;
 }
-
 main ul li a:link {
   background-color: green;
 }
-
 main ul li a:visited {
   background-color: orange;
 }
-
 main ul li a:hover {
   background-color: pink;
 }
-
 main ul li a:active {
   background-color: yellow;
 }
@@ -57,24 +49,19 @@ main ul li a:active {
   align-items: center;
   flex-direction: row;
 }
-
 .prvi p {
   width: 23vw;
   margin-left: 10px;
 }
-
 .prvi p.p-1 {
   background-color: lightblue;
 }
-
 .prvi p.p-2 {
   background-color: lightcoral;
 }
-
 .prvi p.p-3 {
   background-color: lightgreen;
 }
-
 .prvi p.p-4 {
   background-color: lightslategray;
 }
@@ -102,12 +89,10 @@ main ul li a:active {
   align-items: center;
   flex-direction: row;
 }
-
 .drugi .p-5 {
   background-color: lightblue;
   box-sizing: content-box;
 }
-
 .drugi .p-6 {
   background-color: lightseagreen;
   box-sizing: border-box;
@@ -117,13 +102,9 @@ main ul li a:active {
   width: 90vw;
   display: flex;
 }
-
 .tabela table {
   margin: auto;
 }
-
 .tabela table td {
   width: 14vw;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
