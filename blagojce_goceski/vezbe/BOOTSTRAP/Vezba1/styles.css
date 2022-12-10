@@ -1,0 +1,14 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    object-fit: contain;
+    width: 30vw;
+}
+
+.tekst {
+    color: white;
+    font-weight: bold;
+}
