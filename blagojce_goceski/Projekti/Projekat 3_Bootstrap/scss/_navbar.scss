@@ -1,0 +1,158 @@
+@import './variables';
+
+/*************************************************/
+/*********** MOBILE PHONE CSS SETTINGS ***********/
+/*************************************************/
+
+@media only screen and (max-width: 767px) {
+
+    body {
+
+        nav {
+
+            .navbar-toggler {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px 10px;
+                background-color: $greenish;
+                font-size: 1rem;
+                border: 2px solid $greenish;
+                border-radius: 4px;
+                color: white;
+
+                span {
+                    margin-left: 3px;
+                    width: 2.2vw;
+                }
+            }
+
+            .navbar-brand {
+                color: white;
+
+                &:hover {
+                    color: $greenish;
+                }
+            }
+
+            li {
+                .nav-link {
+                    color: white;
+
+                    &:hover {
+                        color: $greenish;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*************************************************/
+/************** TABLET CSS SETTINGS **************/
+/*************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    body {
+
+        nav {
+
+            .navbar-toggler {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px 10px;
+                background-color: none;
+                font-size: 1rem;
+                border: 1px solid white;
+                border-radius: 4px;
+                color: white;
+                margin-right: 5rem;
+
+                span {
+                    margin-left: 3px;
+                    width: 2.2vw;
+                }
+            }
+
+            .navbar-brand {
+                color: white;
+                margin-left: 4rem;
+
+                &:hover {
+                    color: $greenish;
+                }
+            }
+
+            li {
+                .nav-link {
+                    color: white;
+                    margin-left: 4rem;
+
+                    &:hover {
+                        color: $greenish;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*************************************************/
+/************* DESKTOP CSS SETTINGS **************/
+/*************************************************/
+
+@media only screen and (min-width: 1200px) {
+
+    body {
+
+        nav {
+
+            .navbar-toggler {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px 10px;
+                background-color: none;
+                font-size: 1rem;
+                border: 1px solid white;
+                border-radius: 4px;
+                color: white;
+                margin-right: 5rem;
+
+                span {
+                    margin-left: 3px;
+                    width: 2.2vw;
+                }
+            }
+
+            .navbar-brand {
+                color: white;
+                margin-left: 20vw;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: $greenish;
+                }
+            }
+
+            ul {
+                margin-left: 27vw;
+
+                li {
+                    .nav-link {
+                        color: white;
+                        margin-left: 0.4rem;
+                        font-size: 0.8rem;
+
+                        &:hover {
+                            color: $greenish;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

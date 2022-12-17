@@ -6,15 +6,19 @@
 // }
 var niz = [ 
     { product: "Milk", quantity: 1, price: 1.50 },
-    { product: "Juice", quantity: 1, price: 2.25 },
+    { product: "Juice", quantity: 2, price: 2.25 },
     { product: "Meat", quantity: 1, price: 4.75 }
     ];
 
 function totalPrice(input) {
+    if (!input || input.length == 0) {
+        return 0;
+    }
+
     let total = 0;
     for (let i = 0; i < input.length; i++) {
         console.log(input[i]["price"]);
-        total += input[i]["price"];
+        total += input[i]["price"] * input[i]["quantity"];
     }
     return total;
 }
@@ -83,27 +87,39 @@ var b = [{ me: 40, spouse: 5 }, { me: 9, spouse: 10 }, { me: 9, spouse: 10 }];
 var c = [{ me: 10, spouse: 5 }, { me: 9, spouse: 44 }, { me: 10, spouse: 55 }];
 
 function determineWhoCursedTheMost(input) {
+    if (!input || input.length == 0) {
+        return '';
+    }
     // console.log(input);
     var meScore = 0;
     var spouseScore = 0;
     for (let i = 0; i < input.length; i++) {
-        meScore += input[i]["me"];
-        spouseScore += input[i]["spouse"];
+        // meScore += input[i]["me"]; MOZE I OVAKO
+        meScore += input[i].me;
+        // spouseScore += input[i]["spouse"]; MOZE I OVAKO
+        spouseScore += input[i].spouse;
     }
     // console.log(meScore);
     // console.log(spouseScore);
+    // if (meScore == spouseScore) {
+    //     return console.log("DRAW!");
+    // } else if (meScore < spouseScore) {
+    //     return console.log("SPOUSE!");
+    // } else {
+    //     return console.log("ME!");
+    // }
+
     if (meScore == spouseScore) {
-        return console.log("DRAW!");
+        return "DRAW!";
     } else if (meScore < spouseScore) {
-        return console.log("SPOUSE!");
-    } else {
-        return console.log("ME!");
-    }
+        return "SPOUSE!";
+    } 
+    return "ME!";
 }
 
-determineWhoCursedTheMost(a);
-determineWhoCursedTheMost(b);
-determineWhoCursedTheMost(c);
+console.log(determineWhoCursedTheMost(a));
+console.log(determineWhoCursedTheMost(b));
+console.log(determineWhoCursedTheMost(c));
 
 
 // Exercise 5 - Create a function that converts color in RGB format to Hex format.
@@ -134,6 +150,41 @@ rgbToHex(a);
 rgbToHex(b);
 rgbToHex(c);
 
+// RGB to HEX - Varijanta 2
+function checkColor(color = 0) {
+    return color < 0 || color > 255
+}
+function rgbToHex(color = {}) {
+    if (!color || checkColor(color.red) || checkColor(color.green) || checkColor(color.blue)) {
+        return 'INVALID';
+    }
+
+    // padStart dodaje u stringu do zadatu duzinu
+    var red = color.red.toString(16).padStart(2, '0');
+    var green = color.green.toString(16).padStart(2, '0');
+    var blue = color.blue.toString(16).padStart(2, '0');
+
+    return `#${red}${green}${blue}`;
+}
+
+function hexToRGB(str = '') {
+    if (!str || !str.startsWith('#') || str.length != 7) {
+        return null;
+    }
+
+    var colorString = str.split('#')[1];
+    var red = parseInt(colorString.substring(0, 2), 16);
+    var green = parseInt(colorString.substring(2, 4), 16);
+    var blue = parseInt(colorString.substring(4), 16);
+
+    return {red, green, blue};
+}
+
+var hex = rgbToHex({red: 0, green: 128, blue: 192});
+console.log(hex);
+console.log(hexToRGB(hex));
+
+
 
 // Exercise 6 - Create a function that takes an amount of monetary change (e.g. 47 cents) and breaks down the most efficient way that change can be made using USD quarters, dimes, nickels and pennies. Your function should return an object.
 // COIN     VALUE
@@ -145,7 +196,11 @@ rgbToHex(c);
 // makeChange(47) ➞ { "q": 1, "d": 2, "n": 0, "p": 2 }
 // makeChange(24) ➞ { "q": 0, "d": 2, "n": 0, "p": 4 }
 // makeChange(92) ➞ { "q": 3, "d": 1, "n": 1, "p": 2 }
-function makeChange(input) {
+function makeChange(input = 0) {
+    if (input < 0) {
+        return null;
+    }
+
     var a = new Object();
 
     var q = input / 25;
@@ -172,12 +227,58 @@ console.log(makeChange(24));
 console.log(makeChange(92));
 
 
+// Exercise 6 -  Drugi nacin
+function makeChange(number) {
+    var quarter = 0; //25
+    var dime = 0; //10
+    var nickel = 0; //5
+    var penny = 0; //1
+    var remainingChange = number;
+
+    while (remainingChange >= 25) {
+        remainingChange -= 25;
+        quarter++;
+    }
+    while (remainingChange >= 10) {
+        remainingChange -= 10;
+        dime++;
+    }
+    while (remainingChange >= 5) {
+        remainingChange -= 5;
+        nickel++;
+    }
+    while (remainingChange > 0) {
+        remainingChange -= 1;
+        penny++;
+    }
+
+    var obj = {
+        q: quarter,
+        d: dime,
+        n: nickel,
+        p: penny
+    }
+
+    return obj;
+
+}
+console.log(makeChange(13));
+console.log(makeChange(24));
+console.log(makeChange(92));
+
+
+
 // Exercise 7 - Create a function that takes an array of objects like { name: "John", notes: [3, 5, 4]} and returns an array of objects like { name: "John", avgNote: 4 }. If student has no notes (an empty array) then let's assume avgNote: 0.
 //    Examples:
 //    [ { name: "John", notes: [3, 5, 4]} ] ➞ [ { name: "John", avgNote: 4 } ]
 function rearange(input) {
+    if (!input || input.length == 0) {
+        return null;
+    }
+
     var n = new Object();
     var niz = input[0]["notes"];
+    // var niz = input[0].notes;    // Moze i ovako
     var sum = 0;
     var average;
     for (let i = 0; i < niz.length; i++) {
@@ -187,10 +288,11 @@ function rearange(input) {
     if (niz.length == 0) {
         average = 0;
     } else {
-        average = sum / niz.length;
+        average = parseFloat(sum / niz.length).toFixed(2);
     }
     n.name = input[0]["name"];
-    n.avgNote = average
+    // n.name = input[0].name;      // Moze i ovako
+    n['avgNote'] = average
     return n;
 }
 
@@ -212,6 +314,10 @@ function average(array) {
 }
 
 function getBestStudent(input) {
+    if (!input || input.length == 0) {
+        return null;
+    }
+
     var averageGrade = 0;
     var bestStudent = input[0]["name"];
     for (let i = 0; i < input.length; i++) {

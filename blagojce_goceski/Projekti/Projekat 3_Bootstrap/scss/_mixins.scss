@@ -1,0 +1,44 @@
+@mixin line($color) {
+    display: inline-block;
+    height: 10px;
+    width: 70px;
+    border-top: 3px solid $color;
+}
+
+@mixin star($color) {
+    display: inline-block;
+    position: relative;
+    color: $color;
+    font-size: 1.25rem;
+    top: -2px;
+}
+
+@mixin line-tablet($color) {
+    display: inline-block;
+    height: 10px;
+    width: 80px;
+    border-top: 4px solid $color;
+}
+
+@mixin star-tablet($color) {
+    display: inline-block;
+    position: relative;
+    color: $color;
+    font-size: 1.5rem;
+    top: -1px;
+}
+
+@mixin line-desktop($color) {
+    display: inline-block;
+    height: 10px;
+    width: 75px;
+    border-top: 3px solid $color;
+}
+
+@mixin star-desktop($color) {
+    display: inline-block;
+    position: relative;
+    color: $color;
+    font-size: 1.3rem;
+    top: -1px;
+}

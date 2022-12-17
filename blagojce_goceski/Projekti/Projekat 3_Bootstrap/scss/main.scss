@@ -1,0 +1,430 @@
+// $greenish
+// $blueish
+// $Contact-form-input-text
+
+@import './contact';
+@import './global';
+@import './masthead';
+@import './mixins';
+@import './navbar';
+@import './portfolio';
+@import './variables';
+
+
+/*************************************************/
+/*********** MOBILE PHONE CSS SETTINGS ***********/
+/*************************************************/
+
+@media only screen and (max-width: 767px) {
+
+    body {
+        background-color: $blueish;
+
+        .line-star-line {
+            text-align: center;
+
+            .line {
+                @include line(black);
+            }
+
+            .fa-star {
+                @include star(black);
+            }
+        }
+    }
+
+    .first-profile {
+        background-color: $greenish;
+        text-align: center;
+
+        .profile-picture {
+            width: 47vw;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        h6 {
+            color: white;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .line-star-line {
+            text-align: center;
+
+            .line {
+                @include line(white);
+            }
+
+            .fa-star {
+                @include star(white);
+            }
+        }
+    }
+
+    .fifth-footer {
+        background-color: $blueish;
+        color: white;
+        text-align: center;
+        width: 90vw;
+
+        .footer {
+            .location {
+                h4 {
+                    margin-top: 2rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .around-the-web {
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .links {
+                    button {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        background-color: $blueish;
+                        border: 2px solid white;
+                        border-radius: 1.1rem;
+                        margin-left: 1px;
+                        margin-right: 1px;
+
+                        &:hover {
+                            background-color: white;
+                            border: 2px solid white;
+                            color: $blueish;
+
+                            a {
+                                color: $blueish;
+                            }
+                        }
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            .more-details {
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+
+        }
+
+        .footer-end {
+            margin-top: 3.5rem;
+
+            h6 {
+                font-size: 0.8rem;
+            }
+
+            p {
+                font-size: 0.6rem;
+                color: $Contact-form-input-text;
+            }
+        }
+    }
+
+}
+
+
+/*************************************************/
+/************** TABLET CSS SETTINGS **************/
+/*************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    body {
+        background-color: $blueish;
+
+        .line-star-line {
+            text-align: center;
+
+            .line {
+                @include line-tablet(black);
+            }
+
+            .fa-star {
+                @include star-tablet(black);
+            }
+        }
+    }
+
+    .first-profile {
+        background-color: $greenish;
+        text-align: center;
+
+        .profile-picture {
+            width: 25vw;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-left: 6rem;
+            margin-right: 6rem;
+        }
+
+        h6 {
+            color: white;
+            margin-top: 1rem;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            margin-bottom: 5rem;
+            font-size: 1.5rem;
+        }
+
+        .line-star-line {
+            text-align: center;
+
+            .line {
+                @include line-tablet(white);
+            }
+
+            .fa-star {
+                @include star-tablet(white);
+            }
+        }
+    }
+
+    .fifth-footer {
+        background-color: $blueish;
+        color: white;
+        text-align: center;
+        width: 70vw;
+
+        .footer {
+            .location {
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .around-the-web {
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .links {
+
+                    button {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        background-color: $blueish;
+                        border: 2px solid white;
+                        border-radius: 1.1rem;
+                        margin-left: 1px;
+                        margin-right: 1px;
+
+                        &:hover {
+                            background-color: white;
+                            border: 2px solid white;
+                            color: $blueish;
+
+                            a {
+                                color: $blueish;
+                            }
+                        }
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            .more-details {
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+
+        }
+
+        .footer-end {
+            margin-top: 3.5rem;
+
+            h6 {
+                font-size: 0.8rem;
+            }
+
+            p {
+                font-size: 0.6rem;
+                color: $Contact-form-input-text;
+            }
+        }
+    }
+
+}
+
+
+/*************************************************/
+/************* DESKTOP CSS SETTINGS **************/
+/*************************************************/
+
+@media only screen and (min-width: 1200px) {
+
+    body {
+        background-color: $blueish;
+
+        .line-star-line {
+            text-align: center;
+
+            .line {
+                @include line-desktop(black);
+            }
+
+            .fa-star {
+                @include star-desktop(black);
+            }
+        }
+    }
+
+    .first-profile {
+        background-color: $greenish;
+        text-align: center;
+
+        .profile-picture {
+            width: 14vw;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-left: 6rem;
+            margin-right: 6rem;
+        }
+
+        h6 {
+            color: white;
+            margin-top: 1rem;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            margin-bottom: 5rem;
+            font-size: 1.2rem;
+        }
+
+        .line-star-line {
+            text-align: center;
+
+            .line {
+                @include line-desktop(white);
+            }
+
+            .fa-star {
+                @include star-desktop(white);
+            }
+        }
+    }
+
+    .fifth-footer {
+        background-color: $blueish;
+        color: white;
+        text-align: center;
+        width: 60vw;
+
+        .footer {
+            .location {
+
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .around-the-web {
+
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .links {
+
+                    button {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        background-color: $blueish;
+                        border: 2px solid white;
+                        border-radius: 1.1rem;
+                        margin-left: 1px;
+                        margin-right: 1px;
+
+                        &:hover {
+                            background-color: white;
+                            border: 2px solid white;
+                            color: $blueish;
+
+                            a {
+                                color: $blueish;
+                            }
+                        }
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            .more-details {
+
+                h4 {
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+
+        }
+
+        .footer-end {
+            margin-top: 3.5rem;
+
+            h6 {
+                font-size: 0.8rem;
+            }
+
+            p {
+                font-size: 0.6rem;
+                color: $Contact-form-input-text;
+            }
+        }
+    }
+
+}
