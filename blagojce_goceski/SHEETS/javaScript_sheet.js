@@ -15,7 +15,7 @@ alert( +n.toFixed(2) ); // 1.23 number
 alert( Math.round(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23 number
 
 
-
+// Random integer
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
@@ -34,6 +34,35 @@ console.log(power);
 // ------- SHORTHAND -------
 const power1 = 4 ** 3; // 64
 console.log(power1);
+
+
+// SORTIRANJE NIZOVA BROJEVA
+// Exercise 2 - Write a functional expression that removes all duplicates in a given array.
+// Input: [8, 13, 8, 9, 12, 8, 1, 1, 4, 13]
+// Output: [1, 4, 8, 9, 12, 13]
+function uniqChar(input = []){
+  var numbers = [...new Set(input)];
+  
+  // numbers.sort( function( a , b){     // Redja ih po velicini
+  //     if(a > b) return 1;
+  //     if(a < b) return -1;
+  //     return 0;
+  // });
+  
+  // DRUGI NACIN SA ARROW FUNCTION
+  // numbers.sort((a,b) => {
+  //     if(a > b) return 1;
+  //     if(a < b) return -1;
+  //     return 0;
+  // });
+
+  // NAJKRACI NACIN
+  numbers.sort((a, b) => a - b);
+
+  return numbers;
+}
+var a = [8, 13, 8, 9, 12, 8, 1, 1, 4, 13];
+console.log(uniqChar(a));
 
 
 

@@ -22,38 +22,29 @@ console.log(duplicateElement(a));
 // Exercise 2 - Write a functional expression that removes all duplicates in a given array.
 // Input: [8, 13, 8, 9, 12, 8, 1, 1, 4, 13]
 // Output: [1, 4, 8, 9, 12, 13]
-function eliminateDuplicate(input) {
-    if (!input || input.length == 0) {
-        return [];
-    }
-
-    // var niz = [];
-    // for (let i = 0; i < input.length; i++) {
-    //     for (let j = 0; j < niz.length; j++) {
-            
-    //     }
-    //     niz.push(input[i]);
-    //     niz.push(input[i]);
-    // }
-
-    // return niz;
-
-}
-
-var x = [8, 13, 8, 9, 12, 8, 1, 1, 4, 13];
-console.log(eliminateDuplicate(x));
-
-
-// Exercise 2 - Drugi nacin Vlada
 function uniqChar(input = []){
-    var uniqueChars = [...new Set(input)];
-    uniqueChars.sort();
+    var numbers = [...new Set(input)];
     
-    return uniqueChars;
+    // numbers.sort( function( a , b){     // Redja ih po velicini
+    //     if(a > b) return 1;
+    //     if(a < b) return -1;
+    //     return 0;
+    // });
+    
+    // DRUGI NACIN SA ARROW FUNCTION
+    // numbers.sort((a,b) => {
+    //     if(a > b) return 1;
+    //     if(a < b) return -1;
+    //     return 0;
+    // });
+
+    // NAJKRACI NACIN
+    numbers.sort((a, b) => a - b);
+
+    return numbers;
 }
 var a = [8, 13, 8, 9, 12, 8, 1, 1, 4, 13];
-var rez = uniqChar(a);
-console.log(rez);
+console.log(uniqChar(a));
 
 
 // Exercise 3a - Write a function that checks if a given array has odd number of elements.
@@ -275,29 +266,135 @@ console.log(rez);
 
 
 // Exercise 7c - Write a function that checks if a given string is a valid hexadecimal color.
+function isHex(num) {
+    if (!num || num.length == 0 || num[0] != '#') {
+        return false;
+    }
 
-// Exercise 7d - Write a function that checks if a given number belongs to the interval from 1900 to 2018.
+    var a = num.substring(1, 7);
+    // console.log(a);
+        return /[0-9A-Fa-f]{6}/g.test(a);   // {6}g - da proveri sve karaktere
+}
+
+console.log(isHex('#e7bf4a5'));
+console.log(isHex('#e7bf4a'));
+console.log(isHex('#e7BC4a'));
+console.log(isHex('#e7bG4a'));
+
 
 // Exercise 7e - Write a function named validator that returns an object with properties stringValidator, passwordValidator, colorValidator, and yearValidator referencing the functions from a) to d).
+
+
 
 // Exercise 8 - Write a function that calculates a number of days to your birthday.
 // Input: 25 February
 // Output: 5 days
+function daysToBirthday(input = "2023-09-30") {
+    var birthday = new Date(input);
+    var todayDate = new Date()
+    var days = (birthday - todayDate) / 86400000;  // Razlika je u milisekundama
+    return ~~days;  // Vraca integer, brise decimale
+}
+console.log(daysToBirthday());
+
+
 
 // Exercise 9 - Write a function that for a given departure and arrival time calculates the time the trip takes.
 // Input: 8:22:13 11:43:22
 // Output: 3 hours 21 minutes 9 seconds
+function tripTime(dep, arr) {
+    if (dep.length == 7) {
+        dep = '0' + dep;
+    }
+    if (arr.length == 7) {
+        arr = '0' + arr;
+    }
+    var depHours = +dep.substring(0, 2);
+    var depMin = +dep.substring(3, 5);
+    var depSec = +dep.substring(6);
+    var arrHours = +arr.substring(0, 2);
+    var arrMin = +arr.substring(3, 5);
+    var arrSec = +arr.substring(6);
+
+    var tripTime = (arrHours*60*60 + arrMin*60 + arrSec) - (depHours*60*60 + depMin*60 + depSec);
+    var tripTimeHours = tripTime / 3600;
+    var tripTimeMin = (tripTime % 3600) / 60;
+    var tripTimeSec = (tripTime % 3600) % 60;
+
+    return `${~~tripTimeHours}:${~~tripTimeMin}:${tripTimeSec}`;
+}
+var departure = "8:22:13"
+var arrival = "11:43:22"
+
+console.log(tripTime(departure, arrival));
+
+
 
 // Exercise 10a - Write a constructor function that creates points in space. Each point in space has its own x, y, and z coordinate. For example, (3, 5, 1) can be a point in space.
 
 // Exercise 10b - Write a function that calculates the distance between two points in the space.
 
+
+
 // Exercise 11a - Write a function that generates a random integer value between 5 and 20.
+function getRandomInt(max = 101) {
+    return Math.floor(Math.random() * max);     // Random integer 0 - 100
+  }
+
+function randomRange(min, max) {
+    var a = Math.floor(Math.random() * (max + 1));
+    while (a < min) {
+        a = Math.floor(Math.random() * (max + 1));
+    } 
+    return a;
+}
+
+console.log(randomRange(5, 20));
+
 
 // Exercise 11b - Write a function that generates a random integer value between 50 and 100.
+console.log(randomRange(50, 100));
+
+
 
 // Exercise 11c - Write a function which expects a number and a callback generator function and returns an array of numbers produced by the generator function.
+function randomRange(min, max) {
+    var a = Math.floor(Math.random() * (max + 1));
+    while (a < min) {
+        a = Math.floor(Math.random() * (max + 1));
+    } 
+    return a;
+}
+
+function arrayRandomNumbers(n, callback) {
+    var niz = [];
+    for (let i = 0; i < n; i++) {
+        var a = callback(0, 100);
+        niz.push(a);
+    }
+    return niz
+}
+
+console.log(arrayRandomNumbers(7, randomRange));
+
+
 
 // Exercise 12 - Write a function that shuffles the elements of a given array.
 // Input: [3, 6, 11, 2, 9, 1]
 // Output: [6, 2, 9, 1, 3, 11] (it can be any random permutation of the given array)
+function shuffle(array) {
+    var newArray = [...array]
+    var length = newArray.length
+  
+    for (let start = 0; start < length; start++) {
+      var randomPosition = Math.floor((newArray.length - start) * Math.random())
+      var randomItem = newArray.splice(randomPosition, 1)
+  
+      newArray.push(...randomItem)
+    }
+  
+    return newArray
+  }
+
+  var niz = [3, 6, 11, 2, 9, 1];
+  console.log(shuffle(niz));
