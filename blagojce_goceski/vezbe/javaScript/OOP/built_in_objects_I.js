@@ -1,3 +1,5 @@
+// BUILT IN OBJECTS I
+
 // Exercise 1 - Write a functional expression that duplicates each element of a given array.
 // Input: [2, 4, 7, 11, -2, 1]
 // Output: [2, 2, 4, 4, 7, 7, 11, 11, -2, -2, 1, 1]
@@ -291,8 +293,10 @@ console.log(isHex('#e7bG4a'));
 // Output: 5 days
 function daysToBirthday(input = "2023-09-30") {
     var birthday = new Date(input);
+    // console.log(birthday);
     var todayDate = new Date()
     var days = (birthday - todayDate) / 86400000;  // Razlika je u milisekundama
+    // console.log(days);
     return ~~days;  // Vraca integer, brise decimale
 }
 console.log(daysToBirthday());
@@ -303,6 +307,12 @@ console.log(daysToBirthday());
 // Input: 8:22:13 11:43:22
 // Output: 3 hours 21 minutes 9 seconds
 function tripTime(dep, arr) {
+    // Moguce resenje (krace) sa .split()
+    const depArray = dep.split(":");    // Pravi niz sa podelom na :
+    const arrArray = arr.split(":");    // Pravi niz sa podelom na :
+    console.log(depArray);              // Niz
+    console.log(arrArray);              // Niz
+    // ----------------------------------
     if (dep.length == 7) {
         dep = '0' + dep;
     }
