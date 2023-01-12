@@ -16,7 +16,7 @@ function Product (name, price, expiration) {
         // return productCode;
 
         // Array
-        var productInfo = [this.name, this.price];
+        var productInfo = [this.name, this.price, this.expiration];
         this.productCode = `${this.name[0].toUpperCase()}${this.name[this.name.length-1].toUpperCase()}${this.productID}`;
         productInfo.unshift(this.productCode);
         return productInfo;

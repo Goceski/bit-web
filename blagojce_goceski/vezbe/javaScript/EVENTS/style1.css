@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(35, 35, 68);
+}
+
+#div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#button1 {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#button2 {
+    background-color: rgb(230, 185, 103);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.newBackground {
+    background-color: darkgray;
+}
+
+.noToggle {
+    pointer-events: none;
+}
+
+
+/* Chat Room */
+#chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#messageText {
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+#inputText {
+    width: 240px;
+}
+
+#buttonSend {
+    color: white;
+    background-color: red;
+}
+
+.messageBackground {
+    background-color: rgb(197, 197, 197);
+    width: fit-content;
+    border-radius: 3px;
+    padding: 3px 5px;
+}
