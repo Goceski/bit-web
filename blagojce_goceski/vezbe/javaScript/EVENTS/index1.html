@@ -13,15 +13,18 @@
 
     <div id="div1">
         <button id="button1" onclick="toggleBackground()">Toggle Background</button>
-        <button id="button2" onclick="turnOff()">Turn Off</button>
+        <button id="button2" onclick="turnOff()">Turn Off Toggle</button>
     </div>
 
     <!-- Chat Room -->
     <div id="chat">
         <div id="messageText"></div>
         <form action="" onsubmit="return false;"> <!-- "return false" da se text ne gubi -->
-            <input id="inputText" type="text">
             <button id="buttonSend" onclick="sendMessage()">Send</button>
+            <input id="inputText" type="text">
+            <br>
+            <input id="inputText2" type="text">
+            <button id="buttonSend" onclick="sendMessage2()">Send</button>
         </form>
     </div>
 

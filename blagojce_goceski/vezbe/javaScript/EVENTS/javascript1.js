@@ -16,6 +16,17 @@ function sendMessage() {
     var newElemText = document.createTextNode(text.value);
     newElem.classList.add("messageBackground");
     newElem.appendChild(newElemText);
-    var text2 = document.getElementById('messageText');
-    text2.appendChild(newElem);
+    var inputText = document.getElementById('messageText');
+    inputText.appendChild(newElem);
+}
+
+function sendMessage2() {
+    var text2 = document.getElementById('inputText2');
+    // alert(text.value);
+    var newElem2 = document.createElement('p');
+    var newElemText2 = document.createTextNode(text2.value);
+    newElem2.classList.add("messageBackground2");
+    newElem2.appendChild(newElemText2);
+    var inputText2 = document.getElementById('messageText');
+    inputText2.appendChild(newElem2);
 }
