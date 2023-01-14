@@ -1,0 +1,23 @@
+body {
+    background-image: url('./images/teren.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    ;
+}
+
+#messi {
+    width: 10vw;
+}
+
+button {
+    position: absolute;
+    top: 45vw;
+    left: 75vw;
+    font-size: 2vw;
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}

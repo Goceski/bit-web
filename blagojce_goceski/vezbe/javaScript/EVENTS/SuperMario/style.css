@@ -1,0 +1,53 @@
+@keyframes animateBgRight {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: -75vw;
+    }
+}
+
+@keyframes animateBgLeft {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 75vw;
+    }
+}
+
+body {
+    background-image: url('./images/bg.jpg');
+    background-repeat: repeat-x;
+    background-size: 75vw;
+}
+
+.body-animate-right {
+    background-image: url('./images/bg.jpg');
+    background-repeat: repeat-x;
+    background-size: 75vw;
+    animation: animateBgLeft 15s linear infinite;
+    /* animation-play-state: running; */
+}
+
+.body-animate-left {
+    background-image: url('./images/bg.jpg');
+    background-repeat: repeat-x;
+    background-size: 75vw;
+    animation: animateBgRight 15s linear infinite;
+    /* animation-play-state: running; */
+}
+
+#super-mario {
+    height: 15vw;
+    width: 15vw;
+    position: relative;
+    top: 19vw;
+    left: 42vw;
+}
+
+.stopBg {
+    animation-play-state: paused;
+}
