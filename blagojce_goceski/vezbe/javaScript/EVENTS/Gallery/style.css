@@ -1,0 +1,17 @@
+#gallery {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+img {
+    width: 250px;
+    margin-top: 30px;
+}
+
+#different {
+    width: 300px;
+}

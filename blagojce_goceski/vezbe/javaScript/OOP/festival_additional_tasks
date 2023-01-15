@@ -14,12 +14,15 @@
 
 
     // constructor function Movie
-    function Movie (title, genre, length) {
-        this.title = title;
-        this.genre = new Genre(genre);
-        this.length = length;
+    // string = "Avatar, 130, SciFi";
+    // string.split(", ");  =>  [Avatar, 130, SciFi]
+    function Movie (input = '') {    
+        var niz = input.split(", ");
+        this.title = niz[0];
+        this.genre = new Genre(niz[2]);
+        this.length = +niz[1];
         this.getData = function() {
-            return `${title}, ${length}min, ${this.genre.getData()}`;
+            return `${this.title}, ${this.length}min, ${this.genre.getData()}`;
         }
     }
 
@@ -85,27 +88,39 @@
  // ----------------------------------------------------------
     // funkcija za kreiranje filmova
     function createMovie(input = '') {
-        let a = new Movie(input);
-        return a;
+        if (!input || input.length == 0) {
+            console.log("Wrong input");
+        }
+        return new Movie(input);
     }
  // ----------------------------------------------------------
     
+
     // inicijalizacija 'Filmova'
-    // var film1 = createMovie('Rambo', 'Action', 130);
-    var film1 = new Movie('Rambo', 'Action', 130);
-    console.log(film1.getData());
-    var film2 = new Movie('Avatar', 'SciFi', 120);
-    console.log(film2.getData());
-    var film3 = new Movie('Pleasure', 'Drama', 90);
-    console.log(film1.getData());
-    var film4 = new Movie('Lionking', 'Cartoon', 75);
+    var film1 = createMovie("Rambo, 130, Action");
+    var film2 = createMovie("Avatar, 120, SciFi");
+    var film3 = createMovie("Pleasure is mine, 90, Drama");
+    var film4 = createMovie("Lionking, 75, Cartoon");
+    // console.log(film1.getData());
+    // console.log(film2.getData());
+    // console.log(film1.getData());
     console.log(film4.getData());
 
 
+ // ----------------------------------------------------------
+    // funkcija za kreiranje programa
+    function createProgram(input = '') {
+        if (!input || input.length == 0) {
+            console.log("Wrong input");
+        }
+        return new Program(input);
+    }
+ // ----------------------------------------------------------
+
 
     // inicijalizacija 'Programa'
-    var program1 = new Program('3/25/2023');
-    var program2 = new Program('3/27/2023');
+    var program1 = createProgram('3/25/2023');
+    var program2 = createProgram('3/27/2023');
 
 
     // ubacivanje filmova u 'Program'
@@ -113,17 +128,18 @@
     program1.addMovie(film2);
     program2.addMovie(film3);
     program2.addMovie(film4);
-    console.log(program1);
+    // console.log(program1);
     console.log(program2);
-    console.log(program1.totalNumberOfMovies());
-    console.log(program2.totalNumberOfMovies());
+    // console.log(program1.totalNumberOfMovies());
+    // console.log(program2.totalNumberOfMovies());
+
 
     // inicijalizacija 'Festivala'
     // dodavanje programa u festival
     var festival = new Festival('Zimsko Blejanje');
     festival.addProgram(program1);
     festival.addProgram(program2);
-    console.log(festival);
+    // console.log(festival);
 
     // prikaz festivalskog programa
     console.log(festival.getData());
