@@ -1,5 +1,6 @@
 
-// Jedan nacin detekcija pritisnutog dugmeta
+// SUPER
+// Jedan nacin detekcije pritisnutog dugmeta
 document.onkeydown = checkKey;
 document.onkeyup = stop;
 
@@ -26,7 +27,6 @@ function checkKey(e) {
        // alert('LEFT');
        mario.src = "./images/mario_running_left.gif";
        mario.style.width = "11vw";
-    //    mario.loop = "infinite";
        // mario.src = mario.src.replace(/\?.*$/,"")+"?x="+Math.random();
        // mario.src = "./images/mario_running_left.gif"+"?a="+Math.random();
        document.body.classList.add("body-animate-right");

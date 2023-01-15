@@ -29,7 +29,6 @@ body {
     background-repeat: repeat-x;
     background-size: 75vw;
     animation: animateBgLeft 15s linear infinite;
-    /* animation-play-state: running; */
 }
 
 .body-animate-left {
@@ -37,7 +36,6 @@ body {
     background-repeat: repeat-x;
     background-size: 75vw;
     animation: animateBgRight 15s linear infinite;
-    /* animation-play-state: running; */
 }
 
 #super-mario {

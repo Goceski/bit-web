@@ -1,8 +1,11 @@
 body {
     background-image: url('./images/teren.jpg');
     background-repeat: no-repeat;
-    background-size: 100vw;
-    ;
+    background-size: cover;
+    width: 640px;
+    height: 470px;
+    /* background-size: 100vw 60vw; */
+    /* NE RADI SA DIMENZIJAMA U 'VW' FORMATU */
 }
 
 #messi {

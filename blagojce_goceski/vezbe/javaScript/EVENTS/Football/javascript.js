@@ -1,4 +1,6 @@
+// FOOTBALL
 // var klik = document.getElementsByTagName('body');
+
 
 function onClick(event) {
     // get mouse coordinates
@@ -12,8 +14,8 @@ function onClick(event) {
     var pos = fudbaler.getBoundingClientRect();
     console.log('fudbaler', pos.top);
     console.log('fudbaler', pos.left);
-    fudbaler.style.marginTop = y + "px";
-    fudbaler.style.marginLeft = x + "px";
+    fudbaler.style.marginTop = y - 50 + "px";
+    fudbaler.style.marginLeft = x - 50 + "px";
 }
 
 document.body.addEventListener("click", onClick);

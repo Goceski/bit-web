@@ -1,3 +1,5 @@
+// CHATROOM
+
 function toggleBackground() {
     var elem = document.body;
     elem.classList.toggle("newBackground");
