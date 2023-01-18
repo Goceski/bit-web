@@ -20,7 +20,7 @@ function checkKey(e) {
         // alert('DOWN');
         mario.style.height = "10vw";
         mario.style.width = "16vw";
-        mario.style.marginTop = "35px";
+        // mario.style.marginTop = "30vw";
     }
     else if (e.keyCode == '37') {
        // left arrow
@@ -52,7 +52,7 @@ function checkKey(e) {
 function stop(e) {
     var mario = document.getElementById("super-mario"); 
     mario.src = "./images/mario.png"
-    mario.style.marginTop = "0px";
+    mario.style.marginTop = "1vw";
     mario.style.height = "15vw";
     mario.style.width = "15vw";
     mario.style.left = "42vw";

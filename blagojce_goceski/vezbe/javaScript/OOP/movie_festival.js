@@ -1,3 +1,5 @@
+// MOVIE FESTIVAL
+
 'use strict';
 
 (function() {
