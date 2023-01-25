@@ -10,6 +10,11 @@
 img {
     width: 250px;
     margin-top: 30px;
+    /* cursor: url("/path"), auto; */
+}
+
+img:hover {
+    transform: scale(1.05);
 }
 
 #different {
