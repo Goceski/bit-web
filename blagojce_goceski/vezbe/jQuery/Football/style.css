@@ -1,0 +1,27 @@
+body {
+    background-image: url('./images/teren.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 640px;
+    height: 470px;
+    /* background-size: 100vw 60vw; */
+    /* NE RADI SA DIMENZIJAMA U 'VW' FORMATU */
+}
+
+#messi {
+    width: 10vw;
+    position: absolute;
+}
+
+button {
+    position: absolute;
+    top: 45vw;
+    left: 75vw;
+    font-size: 2vw;
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
