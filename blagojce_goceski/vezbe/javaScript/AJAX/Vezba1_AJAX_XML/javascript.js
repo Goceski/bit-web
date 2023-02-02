@@ -2,7 +2,7 @@
 
 function gettingGeolocation() {
   var inputValue = document.getElementById("inputText");
-  console.log(inputValue.value);
+  // alert(inputValue.value);
   // IP address: 178.237.221.171
   // Capiital: Belgrade
 
