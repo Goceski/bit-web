@@ -86,29 +86,34 @@ function userRepo(input) {
 
   requestRepo
     .done(function (response) {
-      // console.log(response[3].name);
       console.log(response);
-      userRepositories.html("");
-      userRepositories.append(
-        `<h2>Repositories of ${response[0].owner.login}</h2>`
-      );
-      //   userRepositories.append(input);
-
-      response.forEach(function (item) {
-        var newRepoCard = $(
-          `<div class="col-3" style="margin-top:2.5rem">
-                <div class="card" style="width:20rem">
-                    <div class='card-body'>
-                        <h5 class='card-title' style="font-size:1.5rem">${item.name}</h5>
-                        <p class="card-text">${item.language}</p>
-                        <a href='${item.html_url}' target='_blank' class='btn btn-info' style="color:white;font-weight:bold;font-size:1rem">Go to repository</a>
-                    </div>
-                </div>
-            </div>`
+      // console.log(response[3].name);
+      if (response.length == 0) {
+        userRepositories.html("");
+        userRepositories.append(`<h2>No public repositories</h2>`);
+      } else {
+        userRepositories.html("");
+        userRepositories.append(
+          `<h2>Repositories of ${response[0].owner.login}</h2>`
         );
+        //   userRepositories.append(input);
 
-        userRepositories.append(newRepoCard);
-      });
+        response.forEach(function (item) {
+          var newRepoCard = $(
+            `<div class="col-3" style="margin-top:2.5rem">
+                  <div class="card" style="width:20rem">
+                      <div class='card-body'>
+                          <h5 class='card-title' style="font-size:1.5rem">${item.name}</h5>
+                          <p class="card-text">${item.language}</p>
+                          <a href='${item.html_url}' target='_blank' class='btn btn-info' style="color:white;font-weight:bold;font-size:1rem">Go to repository</a>
+                      </div>
+                  </div>
+              </div>`
+          );
+
+          userRepositories.append(newRepoCard);
+        });
+      }
     })
     .fail(function () {
       //
