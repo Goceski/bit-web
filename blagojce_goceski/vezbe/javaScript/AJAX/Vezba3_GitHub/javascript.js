@@ -49,15 +49,15 @@ function gitHub(input) {
 $(document).ready(function () {
   gitHub("react");
 
-  //   console.log($("#textsearch"));
+  // SEARCH
   $("#textsearch").on("keypress", function (e) {
     if (e.key === "Enter") {
       //   alert("Enter pressed");
       //   alert($("#textsearch").val());
-      var searhText = $("#textsearch").val();
+      var searhText = $("#textsearch").val(); // Ne radi sa '.value'
       //   alert(searhText);
       gitHub(`${searhText}`);
-      e.preventDefault(); //Bez ovo ne radi, daje samo DEFAULT
+      e.preventDefault(); // Bez ovo ne radi, daje samo DEFAULT
     }
   });
 });
