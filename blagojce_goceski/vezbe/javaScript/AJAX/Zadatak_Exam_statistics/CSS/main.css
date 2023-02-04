@@ -1,0 +1,102 @@
+.naslov {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.header1 {
+    height: 15rem;
+    background-image: url(".././images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.naslovTxt1 {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.naslovTxt2 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.studentsPassed {
+    background-color: #33b8b4;
+    width: 22rem;
+    height: 2.5rem;
+    margin-top: 1rem
+}
+
+.studentsFailed {
+    background-color: #fc524f;
+    width: 22rem;
+    height: 2.5rem;
+    margin-top: 0.4rem;
+}
+
+.kolona1 {
+    width: 17rem;
+    padding-left: 10px;
+}
+
+.kolona2 {
+    width: 3rem;
+    color: white;
+}
+
+.kolona3 {
+    color: white;
+    padding-right: 10px;
+}
+
+.header2 {
+    background-color: #f7f7f7;
+    height: 3.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.tableleft {
+    width: 25rem;
+}
+
+.tablecenter {
+    width: 2rem;
+}
+
+.tableright {
+    width: 25rem;
+}
+
+.red {
+    color: red;
+}
+
+#red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+#green {
+    color: green;
+}
