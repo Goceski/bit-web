@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Festival</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+
+    <h1>Movie festival</h1>
+    <form>
+        <fieldset name="movie">
+            <p>Please fill in the form</p>
+            <p>Movie</p>
+            <fieldset>
+                <!-- Title input -->
+                <label>Title</label>
+                <input type="text" name="movie-title" id="title" class="movie-title" placeholder="Title" required>
+
+                <!-- Movie length input -->
+                <label>Length (min)</label>
+                <input type="number" name="movie-length" id="length" class="movie-length" placeholder="Length in min"
+                    required>
+
+                <!-- Genre select dropdown  -->
+                <select name="genre-select" id="genre-select" class="genre-select">
+                    <option selected value="-">-</option>
+                    <option value="dramar">Drama</option>
+                    <option value="action">Action</option>
+                    <option value="horror">Horror</option>
+                    <option value="commedyd">Commedy</option>
+                    <option value="scifif">Science Fiction</option>
+                </select>
+
+                <!-- Error message initialy empty -->
+                <div class="movie-error error"></div>
+
+
+                <!-- Crete movie button -->
+                <input type="button" onclick="createMovie(event)" class="create-movie" value="Create movie">
+
+                <!-- Movie list place holder -->
+                <div class="movie-list"></div>
+            </fieldset>
+
+            <div id="hidden">
+                <p>Program</p>
+
+                <fieldset>
+                    <!-- Program date select  -->
+                    <label>Date</label>
+                    <input type="date" name="program-date" class="program-date">
+
+                    <!-- Error message initialy empty -->
+                    <div class="program-error error"></div>
+
+                    <!-- Crete program button -->
+                    <input type="button" onclick="createProgram(event)" class="create-program" value="Create program">
+
+                    <!-- Program list place holder -->
+                    <div class="program-list"></div>
+
+                    <hr>
+
+                    <!-- Select movie -->
+                    <label for="movie-select">Movie</label>
+                    <select name="movie-select" id="movie-select" class="movie-select">
+                        <option value="">-</option>
+                    </select>
+
+                    <!-- Select program -->
+                    <label for="program-select">Program</label>
+                    <select name="program-select" id="program-select" class="program-select">
+                        <option value="">-</option>
+                    </select>
+
+                    <!-- Error message initialy empty -->
+                    <div class="assign-error error"></div>
+
+                    <!-- Add movie to program button -->
+                    <input type="button" onclick="addMovieToProgram(event)" class="add-movie"
+                        value="Add movie to program">
+                </fieldset>
+            </div>
+    </form>
+
+    <script src="./js/entities.js"></script>
+    <script src="./js/form.js"></script>
+
+</body>
+
+</html>
