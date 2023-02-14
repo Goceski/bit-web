@@ -117,4 +117,17 @@ body .pageInfo .info-titles {
 body .pageInfo li,
 body .pageInfo p {
   font-size: 1.2rem;
+}
+body .ui-menu {
+  /* Remove bullets */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  margin-right: 10vw;
+}
+body .ui-menu li:hover {
+  background-color: rgb(60, 146, 180);
+  color: white;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
