@@ -1,0 +1,801 @@
+/*************************************************/
+/*********** MOBILE PHONE CSS SETTINGS ***********/
+/*************************************************/
+@media only screen and (max-width: 767px) {
+  body .fourth-contact {
+    background-color: white;
+  }
+  body .fourth-contact .fourth-footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .fourth-contact .fourth-footer h1 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  body .fourth-contact form label {
+    color: #8c8d8f;
+    font-size: 1.2rem;
+  }
+  body .fourth-contact form input {
+    border-color: #8c8d8f;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  body .fourth-contact form textarea {
+    border-color: #8c8d8f;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  body .fourth-contact form button {
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+  }
+  body .fourth-contact form button:hover {
+    background-color: white;
+    color: #18bc9c;
+    border-color: #18bc9c;
+  }
+}
+/*************************************************/
+/************** TABLET CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  body .fourth-contact {
+    background-color: white;
+  }
+  body .fourth-contact .fourth-footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .fourth-contact .fourth-footer h1 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+  body .fourth-contact form label {
+    color: #8c8d8f;
+    font-size: 1.2rem;
+  }
+  body .fourth-contact form input {
+    border-color: #8c8d8f;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  body .fourth-contact form textarea {
+    border-color: #8c8d8f;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  body .fourth-contact form button {
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+  }
+  body .fourth-contact form button:hover {
+    background-color: white;
+    color: #18bc9c;
+    border-color: #18bc9c;
+  }
+}
+/*************************************************/
+/************* DESKTOP CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 1200px) {
+  body .fourth-contact {
+    background-color: white;
+  }
+  body .fourth-contact .fourth-footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .fourth-contact .fourth-footer h1 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  body .fourth-contact form label {
+    color: #8c8d8f;
+    font-size: 1.2rem;
+  }
+  body .fourth-contact form input {
+    border-color: #8c8d8f;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  body .fourth-contact form textarea {
+    border-color: #8c8d8f;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  body .fourth-contact form button {
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+  }
+  body .fourth-contact form button:hover {
+    background-color: white;
+    color: #18bc9c;
+    border-color: #18bc9c;
+  }
+}
+@font-face {
+  font-family: "Lato Black";
+  src: url(../vendor/fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: "Lato BlackItalic";
+  src: url(../vendor/fonts/Lato-BlackItalic.ttf);
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url(../vendor/fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: "Lato BoldItalic";
+  src: url(../vendor/fonts/Lato-BoldItalic.ttf);
+}
+@font-face {
+  font-family: "Lato Hairline";
+  src: url(../vendor/fonts/Lato-Hairline.ttf);
+}
+@font-face {
+  font-family: "Lato HairlineItalic";
+  src: url(../vendor/fonts/Lato-HairlineItalic.ttf);
+}
+@font-face {
+  font-family: "Lato Italic";
+  src: url(../vendor/fonts/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: "Lato Light";
+  src: url(../vendor/fonts/Lato-Light.ttf);
+}
+@font-face {
+  font-family: "Lato LightItalic";
+  src: url(../vendor/fonts/Lato-LightItalic.ttf);
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url(../vendor/fonts/Lato-Regular.ttf);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*************************************************/
+/*********** MOBILE PHONE CSS SETTINGS ***********/
+/*************************************************/
+@media only screen and (max-width: 767px) {
+  body nav .navbar-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: #18bc9c;
+    font-size: 1rem;
+    border: 2px solid #18bc9c;
+    border-radius: 4px;
+    color: white;
+  }
+  body nav .navbar-toggler span {
+    margin-left: 3px;
+    width: 2.2vw;
+  }
+  body nav .navbar-brand {
+    color: white;
+  }
+  body nav .navbar-brand:hover {
+    color: #18bc9c;
+  }
+  body nav li .nav-link {
+    color: white;
+  }
+  body nav li .nav-link:hover {
+    color: #18bc9c;
+  }
+}
+/*************************************************/
+/************** TABLET CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  body nav .navbar-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+    background-color: none;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    margin-right: 5rem;
+  }
+  body nav .navbar-toggler span {
+    margin-left: 3px;
+    width: 2.2vw;
+  }
+  body nav .navbar-brand {
+    color: white;
+    margin-left: 4rem;
+  }
+  body nav .navbar-brand:hover {
+    color: #18bc9c;
+  }
+  body nav li .nav-link {
+    color: white;
+    margin-left: 4rem;
+  }
+  body nav li .nav-link:hover {
+    color: #18bc9c;
+  }
+}
+/*************************************************/
+/************* DESKTOP CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 1200px) {
+  body nav .navbar-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+    background-color: none;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    margin-right: 5rem;
+  }
+  body nav .navbar-toggler span {
+    margin-left: 3px;
+    width: 2.2vw;
+  }
+  body nav .navbar-brand {
+    color: white;
+    margin-left: 20vw;
+    font-size: 1.5rem;
+  }
+  body nav .navbar-brand:hover {
+    color: #18bc9c;
+  }
+  body nav ul {
+    margin-left: 27vw;
+  }
+  body nav ul li .nav-link {
+    color: white;
+    margin-left: 0.4rem;
+    font-size: 0.8rem;
+  }
+  body nav ul li .nav-link:hover {
+    color: #18bc9c;
+  }
+}
+/*************************************************/
+/*********** MOBILE PHONE CSS SETTINGS ***********/
+/*************************************************/
+@media only screen and (max-width: 767px) {
+  body .second-portfolio {
+    background-color: white;
+    text-align: center;
+  }
+  body .second-portfolio h1 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  body .second-portfolio .pictures {
+    width: 80vw;
+    margin-top: 0.8rem;
+    margin-bottom: 3rem;
+  }
+  body .second-portfolio .pictures img {
+    margin-bottom: 0.8rem;
+  }
+  body .third-about {
+    background-color: #18bc9c;
+    color: white;
+    text-align: center;
+  }
+  body .third-about .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 70px;
+    border-top: 3px solid white;
+  }
+  body .third-about .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1.25rem;
+    top: -2px;
+  }
+  body .third-about h1 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  body .third-about .p1 {
+    margin-top: 0.8rem;
+  }
+  body .third-about p {
+    text-align: left;
+  }
+  body .third-about a {
+    text-decoration: none;
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+  }
+  body .third-about a:hover {
+    color: #18bc9c;
+  }
+}
+/*************************************************/
+/************** TABLET CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  body .second-portfolio {
+    background-color: white;
+    text-align: center;
+  }
+  body .second-portfolio h1 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+  body .second-portfolio .pictures {
+    width: 87vw;
+    margin-top: 0.8rem;
+    margin-bottom: 3rem;
+  }
+  body .second-portfolio .pictures img {
+    margin-bottom: 1.4rem;
+  }
+  body .third-about {
+    background-color: #18bc9c;
+    color: white;
+    text-align: center;
+  }
+  body .third-about .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 80px;
+    border-top: 4px solid white;
+  }
+  body .third-about .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    top: -1px;
+  }
+  body .third-about h1 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+  body .third-about .p1 {
+    margin-top: 0.8rem;
+  }
+  body .third-about p {
+    text-align: left;
+  }
+  body .third-about a {
+    text-decoration: none;
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+  }
+  body .third-about a:hover {
+    color: #18bc9c;
+  }
+}
+/*************************************************/
+/************* DESKTOP CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 1200px) {
+  body .second-portfolio {
+    background-color: white;
+    text-align: center;
+  }
+  body .second-portfolio h1 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  body .second-portfolio .pictures {
+    width: 87vw;
+    margin-top: 0.8rem;
+    margin-bottom: 3rem;
+  }
+  body .second-portfolio .pictures img {
+    margin-bottom: 1.4rem;
+  }
+  body .third-about {
+    background-color: #18bc9c;
+    color: white;
+    text-align: center;
+  }
+  body .third-about .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 75px;
+    border-top: 3px solid white;
+  }
+  body .third-about .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1.3rem;
+    top: -1px;
+  }
+  body .third-about h1 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  body .third-about p {
+    margin-top: 0.8rem;
+    text-align: left;
+  }
+  body .third-about a {
+    text-decoration: none;
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+  }
+  body .third-about a:hover {
+    color: #18bc9c;
+  }
+}
+/*************************************************/
+/*********** MOBILE PHONE CSS SETTINGS ***********/
+/*************************************************/
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: #2c3e50;
+  }
+  body .line-star-line {
+    text-align: center;
+  }
+  body .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 70px;
+    border-top: 3px solid black;
+  }
+  body .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-size: 1.25rem;
+    top: -2px;
+  }
+  .first-profile {
+    background-color: #18bc9c;
+    text-align: center;
+  }
+  .first-profile .profile-picture {
+    width: 47vw;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .first-profile h2 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  .first-profile h6 {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .first-profile .line-star-line {
+    text-align: center;
+  }
+  .first-profile .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 70px;
+    border-top: 3px solid white;
+  }
+  .first-profile .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1.25rem;
+    top: -2px;
+  }
+  .fifth-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    width: 90vw;
+  }
+  .fifth-footer .footer .location h4 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer .around-the-web h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer .around-the-web .links button {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #2c3e50;
+    border: 2px solid white;
+    border-radius: 1.1rem;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .fifth-footer .footer .around-the-web .links button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: #2c3e50;
+  }
+  .fifth-footer .footer .around-the-web .links button:hover a {
+    color: #2c3e50;
+  }
+  .fifth-footer .footer .around-the-web .links button a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  .fifth-footer .footer .more-details h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer-end {
+    margin-top: 3.5rem;
+  }
+  .fifth-footer .footer-end h6 {
+    font-size: 0.8rem;
+  }
+  .fifth-footer .footer-end p {
+    font-size: 0.6rem;
+    color: #8c8d8f;
+  }
+}
+/*************************************************/
+/************** TABLET CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    background-color: #2c3e50;
+  }
+  body .line-star-line {
+    text-align: center;
+  }
+  body .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 80px;
+    border-top: 4px solid black;
+  }
+  body .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-size: 1.5rem;
+    top: -1px;
+  }
+  .first-profile {
+    background-color: #18bc9c;
+    text-align: center;
+  }
+  .first-profile .profile-picture {
+    width: 25vw;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .first-profile h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+  .first-profile h6 {
+    color: white;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+  }
+  .first-profile .line-star-line {
+    text-align: center;
+  }
+  .first-profile .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 80px;
+    border-top: 4px solid white;
+  }
+  .first-profile .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    top: -1px;
+  }
+  .fifth-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    width: 70vw;
+  }
+  .fifth-footer .footer .location h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer .around-the-web h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer .around-the-web .links button {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #2c3e50;
+    border: 2px solid white;
+    border-radius: 1.1rem;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .fifth-footer .footer .around-the-web .links button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: #2c3e50;
+  }
+  .fifth-footer .footer .around-the-web .links button:hover a {
+    color: #2c3e50;
+  }
+  .fifth-footer .footer .around-the-web .links button a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  .fifth-footer .footer .more-details h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer-end {
+    margin-top: 3.5rem;
+  }
+  .fifth-footer .footer-end h6 {
+    font-size: 0.8rem;
+  }
+  .fifth-footer .footer-end p {
+    font-size: 0.6rem;
+    color: #8c8d8f;
+  }
+}
+/*************************************************/
+/************* DESKTOP CSS SETTINGS **************/
+/*************************************************/
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: #2c3e50;
+  }
+  body .line-star-line {
+    text-align: center;
+  }
+  body .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 75px;
+    border-top: 3px solid black;
+  }
+  body .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-size: 1.3rem;
+    top: -1px;
+  }
+  .first-profile {
+    background-color: #18bc9c;
+    text-align: center;
+  }
+  .first-profile .profile-picture {
+    width: 14vw;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .first-profile h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+  .first-profile h6 {
+    color: white;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+  }
+  .first-profile .line-star-line {
+    text-align: center;
+  }
+  .first-profile .line-star-line .line {
+    display: inline-block;
+    height: 10px;
+    width: 75px;
+    border-top: 3px solid white;
+  }
+  .first-profile .line-star-line .fa-star {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1.3rem;
+    top: -1px;
+  }
+  .fifth-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    width: 60vw;
+  }
+  .fifth-footer .footer .location h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer .around-the-web h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer .around-the-web .links button {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #2c3e50;
+    border: 2px solid white;
+    border-radius: 1.1rem;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .fifth-footer .footer .around-the-web .links button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: #2c3e50;
+  }
+  .fifth-footer .footer .around-the-web .links button:hover a {
+    color: #2c3e50;
+  }
+  .fifth-footer .footer .around-the-web .links button a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  .fifth-footer .footer .more-details h4 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .fifth-footer .footer-end {
+    margin-top: 3.5rem;
+  }
+  .fifth-footer .footer-end h6 {
+    font-size: 0.8rem;
+  }
+  .fifth-footer .footer-end p {
+    font-size: 0.6rem;
+    color: #8c8d8f;
+  }
+}/*# sourceMappingURL=main.css.map */

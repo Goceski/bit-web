@@ -1,0 +1,31 @@
+.app-holder {
+    height: 100vh;
+    background: lightgray;
+
+    .header {
+        height: 50px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        background-color: #1531FF;
+    }
+
+    .container {
+        // margin: 0 auto;
+        max-width: 1000px;
+        text-align: center;
+        min-height: 500px;
+        background: white;
+        box-shadow: 1px 1px 8px grey;
+        padding-top: 40px;
+    }
+
+    .footer {
+        height: 50px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        background-color: #1531FF;
+    }
+}

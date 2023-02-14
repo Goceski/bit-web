@@ -1,0 +1,148 @@
+body {
+    margin: 0px;
+    padding: 0px;
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            height: 4rem;
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 1.25rem;
+                color: white;
+            }
+        }
+
+        .naslov {
+            margin: auto;
+            margin-top: 1.2rem;
+            font-weight: bold;
+            font-size: 2rem;
+            color: #444a56;
+        }
+
+        .cardholder {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            .kartica {
+                margin-top: 1.5rem;
+                margin-left: 0.75rem;
+                margin-right: 0.75rem;
+
+                .card {
+                    border-radius: 0px;
+
+                    .card-img-top {
+                        border-radius: 0px;
+                    }
+
+                    .btn {
+                        position: relative;
+                        left: -0.75rem;
+                        text-decoration: none;
+                        color: rgb(52, 129, 218);
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+
+                    .card-text {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        footer {
+            height: 4rem;
+            margin-top: 1.5rem;
+            background-color: #343a40;
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                margin: auto;
+                color: white;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .pageInfo {
+        display: flex;
+        flex-direction: column;
+
+        #title {
+            margin: auto;
+            margin-top: 1rem;
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-left: 35vw;
+        }
+
+        #container-img-seasons-cast {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: baseline;
+
+            #divleft {
+
+                img {
+                    width: 40vw;
+                    margin-left: 10vw;
+                }
+            }
+
+            #divright {
+                width: 30vw;
+                margin-left: 2vw;
+
+                h4 {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        #show-details {
+            margin-top: 2rem;
+            margin-left: 10vw;
+            font-weight: bold;
+        }
+
+        p {
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+
+        #episodes {
+            font-weight: bold;
+            margin-left: 10vw;
+        }
+
+        #ulepisodes {
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .info-titles {
+            font-size: 1.75rem;
+        }
+
+        li,
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+}
