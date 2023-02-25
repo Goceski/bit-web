@@ -1,0 +1,26 @@
+.container .content {
+  padding: 0 10px;
+}
+.container .content input {
+  width: 500px;
+  height: 30px;
+}
+.container .content button {
+  height: 36px;
+  background: blue;
+  color: white;
+  border: none;
+  box-shadow: none;
+  font-size: 14px;
+}
+.container .content li {
+  list-style: none;
+  background: lightgray;
+  padding: 15px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.container .content li:hover {
+  background: gray;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

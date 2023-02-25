@@ -6,8 +6,17 @@
         height: 50px;
         width: 100%;
         color: white;
-        text-align: center;
         background-color: #1531FF;
+
+        .logo-holder {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .container {

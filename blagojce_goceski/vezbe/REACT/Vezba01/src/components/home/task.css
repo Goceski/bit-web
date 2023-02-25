@@ -1,0 +1,30 @@
+li .w-5 {
+  max-width: 5%;
+  width: 100%;
+  float: left;
+}
+li .w-5 input {
+  float: left;
+  max-width: 20px;
+  margin-right: 15px;
+  position: relative;
+  top: -11px;
+}
+li .w-75 {
+  max-width: 75%;
+  width: 100%;
+  float: left;
+}
+li .w-75 span {
+  position: relative;
+  top: -4px;
+  float: left;
+}
+li .w-20 {
+  max-width: 20%;
+  float: right;
+}
+li .w-20 a {
+  position: relative;
+  top: -5px;
+}/*# sourceMappingURL=task.css.map */

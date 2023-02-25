@@ -1,6 +1,6 @@
 var elemID = sessionStorage.getItem("id");
 console.log(elemID);
-const url = "https://api.tvmaze.com/shows/";
+const url = "https://api.tvmaze.com/shows?q=";
 
 function elemInfo() {
   var request = $.ajax({

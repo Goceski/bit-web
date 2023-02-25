@@ -1,0 +1,32 @@
+.container {
+    .content {
+        padding: 0 10px;
+
+        input {
+            width: 500px;
+            height: 30px;
+        }
+
+        button {
+            height: 36px;
+            background: blue;
+            color: white;
+            border: none;
+            box-shadow: none;
+            font-size: 14px;
+        }
+
+        li {
+            list-style: none;
+            background: lightgray;
+            padding: 15px;
+            font-size: 17px;
+            margin-bottom: 10px;
+
+            &:hover {
+                background: gray;
+                cursor: pointer;
+            }
+        }
+    }
+}

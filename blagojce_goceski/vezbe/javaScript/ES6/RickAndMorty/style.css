@@ -1,0 +1,138 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: linear-gradient(rgb(20, 84, 145), rgb(224, 204, 24));
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .main-container {
+  display: flex;
+  flex-direction: column;
+}
+body .main-container .error {
+  color: red;
+  height: 2rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+body .main-container .error-info {
+  color: red;
+  height: 2rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+body .main-container .header {
+  height: 3rem;
+  background-color: #343a40;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .main-container .header h1 {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+body .main-container .header a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+body .main-container .paginacija {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+body .main-container .paginacija a {
+  color: rgb(59, 145, 59);
+}
+body .main-container .cardholder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body .main-container .cardholder .kartica {
+  z-index: 1;
+  margin-top: 1.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+body .main-container .cardholder .kartica .card {
+  border-radius: 0px;
+}
+body .main-container .cardholder .kartica .card .card-img-top {
+  border-radius: 0px;
+  cursor: pointer;
+}
+body .main-container .cardholder .kartica .card .dugmelike {
+  z-index: 2;
+  width: 200px;
+  background-color: white;
+  color: rgb(80, 175, 80);
+  border: solid 1px rgb(59, 151, 59);
+}
+body .main-container .cardholder .kartica .card .card-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #343a40;
+  cursor: pointer;
+}
+body .main-container footer {
+  height: 3rem;
+  margin-top: 1.5rem;
+  background-color: #343a40;
+  display: flex;
+  flex-direction: column;
+}
+body .main-container footer h4 {
+  margin: auto;
+  color: white;
+  font-size: 1rem;
+}
+body .pageInfo {
+  display: flex;
+  flex-direction: column;
+}
+body .pageInfo #container-info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+body .pageInfo #container-info #divleft img {
+  width: 40vw;
+  margin-left: 10vw;
+  border: solid 2px #343a40;
+}
+body .pageInfo #container-info #divright {
+  margin-left: 2vw;
+}
+body .pageInfo #container-info #divright h4 {
+  font-weight: bold;
+}
+body .pageInfo #show-details {
+  margin-top: 2rem;
+  margin-left: 10vw;
+  font-weight: bold;
+}
+body .pageInfo p {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+body .pageInfo .info-titles {
+  font-size: 1.75rem;
+}
+body .pageInfo li,
+body .pageInfo p {
+  font-size: 1.2rem;
+}/*# sourceMappingURL=style.css.map */

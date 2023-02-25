@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="theme-color" content="#444a56" /> -->
+    <title>Rick&Morty</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/128acc9cfc.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="container-fluid bg-light">
+
+    <div class="row">
+        <div class="container-fluid col-12 main-container">
+
+            <!-- Header -->
+            <div class="row header">
+                <div class="col-3 offset-1">
+                    <h1 onclick="indexPage()">Rick&Morty Wiki</h1>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="paginacija">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a id="previous5" class="page-link previous5" href="#">&#60&#60</a></li>
+                        <li class="page-item"><a id="previous1" class="page-link previous1" href="#">&#60</a></li>
+                        <li class="page-item"><a id="page1" class="page-link page-number" href="#">1</a></li>
+                        <li class="page-item"><a id="page2" class="page-link page-number" href="#">2</a></li>
+                        <li class="page-item"><a id="page3" class="page-link page-number" href="#">3</a></li>
+                        <li class="page-item"><a id="page4" class="page-link page-number" href="#">4</a></li>
+                        <li class="page-item"><a id="page5" class="page-link page-number" href="#">5</a></li>
+                        <li class="page-item"><a id="next1" class="page-link next1" href="#">&#62</a></li>
+                        <li class="page-item"><a id="next5" class="page-link next5" href="#">&#62&#62</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Card container initialy empty -->
+            <div class="cardholder"></div>
+
+            <!-- Error container initialy empty -->
+            <div class="error"></div>
+
+            <!-- Footer -->
+            <div class="row">
+                <footer>
+                    <h4>Copyright © Bit Student 2023</h4>
+                </footer>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script src="./javascript.js"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
