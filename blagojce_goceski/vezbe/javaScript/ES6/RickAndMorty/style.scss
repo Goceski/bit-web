@@ -1,7 +1,8 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(rgb(20, 84, 145), rgb(224, 204, 24));
+    background: rgb(2, 0, 36);
+    background: linear-gradient(30deg, rgba(2, 0, 36, 1) 5%, rgba(9, 9, 121, 1) 45%, rgba(255, 184, 0, 1) 100%, rgba(255, 188, 0, 1) 100%);
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -130,7 +131,8 @@ body {
                 img {
                     width: 40vw;
                     margin-left: 10vw;
-                    border: solid 2px #343a40;
+                    border: solid 2px #d2d2d3;
+                    border-radius: 20px;
                 }
             }
 
@@ -140,27 +142,12 @@ body {
                 h4 {
                     font-weight: bold;
                 }
+
+                h5 {
+                    color: rgb(243, 239, 239);
+                    font-size: 1.25rem;
+                }
             }
-        }
-
-        #show-details {
-            margin-top: 2rem;
-            margin-left: 10vw;
-            font-weight: bold;
-        }
-
-        p {
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-
-        .info-titles {
-            font-size: 1.75rem;
-        }
-
-        li,
-        p {
-            font-size: 1.2rem;
         }
     }
 

@@ -1,7 +1,8 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-image: linear-gradient(rgb(20, 84, 145), rgb(224, 204, 24));
+  background: rgb(2, 0, 36);
+  background: linear-gradient(30deg, rgb(2, 0, 36) 5%, rgb(9, 9, 121) 45%, rgb(255, 184, 0) 100%, rgb(255, 188, 0) 100%);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -112,7 +113,8 @@ body .pageInfo #container-info {
 body .pageInfo #container-info #divleft img {
   width: 40vw;
   margin-left: 10vw;
-  border: solid 2px #343a40;
+  border: solid 2px #d2d2d3;
+  border-radius: 20px;
 }
 body .pageInfo #container-info #divright {
   margin-left: 2vw;
@@ -120,19 +122,7 @@ body .pageInfo #container-info #divright {
 body .pageInfo #container-info #divright h4 {
   font-weight: bold;
 }
-body .pageInfo #show-details {
-  margin-top: 2rem;
-  margin-left: 10vw;
-  font-weight: bold;
-}
-body .pageInfo p {
-  margin-left: 10vw;
-  margin-right: 10vw;
-}
-body .pageInfo .info-titles {
-  font-size: 1.75rem;
-}
-body .pageInfo li,
-body .pageInfo p {
-  font-size: 1.2rem;
+body .pageInfo #container-info #divright h5 {
+  color: rgb(243, 239, 239);
+  font-size: 1.25rem;
 }/*# sourceMappingURL=style.css.map */
