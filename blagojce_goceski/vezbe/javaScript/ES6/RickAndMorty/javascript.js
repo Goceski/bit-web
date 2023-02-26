@@ -271,6 +271,7 @@ function like(id) {
     buttonliked.css({ "background-color": "white", color: "rgb(59, 151, 59)" });
     // Removing item (ECMAScript 6 code)
     arrayLiked = arrayLiked.filter((item) => item !== +id);
+    localStorage.setItem("likedCharacters", JSON.stringify(arrayLiked));
     console.log("Disliked", arrayLiked);
   } else {
     buttonliked.css({ "background-color": "rgb(59, 151, 59)", color: "white" });
