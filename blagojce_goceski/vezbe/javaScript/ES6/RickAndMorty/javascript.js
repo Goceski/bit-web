@@ -11,7 +11,7 @@ function rickAndMorty(input = 1) {
     .then((jsObject) => {
       console.log("Response:", jsObject);
       console.log("Response.Results:", jsObject.results);
-      console.log("Next page:", jsObject.info.next);
+      // console.log("Next page:", jsObject.info.next);
 
       cardHolder.html("");
       jsObject.results.forEach(function (item) {
@@ -41,6 +41,27 @@ function rickAndMorty(input = 1) {
 
         cardHolder.append(newCard);
       });
+
+      // LIKED CARDS FROM ARRAY (SESSION STORAGE) -------------------------
+      // LAJKOVANO OBOJITI ZELENO -----------------------------------------
+      let likedToStorage = JSON.parse(
+        localStorage.getItem("likedCharacters") || "[]"
+      );
+      console.log("Liked to storage", likedToStorage);
+      arrayLiked = [...new Set(likedToStorage)]; // ELLIMINATE DUPLICATES
+      arrayLiked.sort((a, b) => a - b); // SORT ASCENDING
+      console.log("Liked to display", arrayLiked);
+
+      arrayLiked.forEach((item) => {
+        if ($(`#${item}`).length) {
+          $(`#${item}`).css({
+            "background-color": "rgb(59, 151, 59)",
+            color: "white",
+          });
+        }
+      });
+
+      // -----------------------------------------------------------------
     })
     .catch((error) => {
       $(".error").text(`Greška: ${error}`);
@@ -230,8 +251,6 @@ $(document).ready(function () {
     }
   });
   // -----------------------------------------------
-
-  likedCharacters();
 });
 
 function infoPage(e, linkPage) {
@@ -260,25 +279,4 @@ function like(id) {
     // LIKED TO LOCAL STORAGE
     localStorage.setItem("likedCharacters", JSON.stringify(arrayLiked));
   }
-}
-
-function likedCharacters() {
-  // ARRAY LIKED
-  let likedToStorage = JSON.parse(
-    localStorage.getItem("likedCharacters") || "[]"
-  );
-  console.log("Liked to storage", likedToStorage);
-  arrayLiked = [...likedToStorage];
-  console.log("Liked to display", arrayLiked);
-
-  // LAJKOVANO OBOJITI ZELENO
-  arrayLiked.forEach((item) => {
-    if ($(`#${item}`)[0]) {
-      // alert("Postoji");
-      $(`#${item}`).css({
-        "background-color": "rgb(59, 151, 59)",
-        color: "white",
-      });
-    }
-  });
 }
