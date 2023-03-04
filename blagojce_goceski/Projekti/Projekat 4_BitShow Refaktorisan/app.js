@@ -1,6 +1,7 @@
 import { NewCard } from "./entities/card.js";
-import { elemInfo } from "./service/info.js";
+import { elemInfo } from "./info.js";
 import { createNewCard } from "./view/ui.js";
+import { getData } from "./service/service.js";
 
 // window.elemInfo = elemInfo; // UKOLIKO SE FUNKCIJA POZIVA PRE NEGO STO SE KOMPLETNO UCITA HTML
 
@@ -18,10 +19,7 @@ function bitShow(input = "shows") {
 
   console.log("BitShow Input:", input);
   console.log(`BitShow URL za pretragu: ${url}${input}`);
-  fetch(`${url}${input}`)
-    .then((response) => {
-      return response.json();
-    })
+  getData(`${url}${input}`)
     .then((response) => {
       console.log("Response:", response);
       response.length = 50; // OGRANICENJE NIZA NA 50
@@ -45,7 +43,8 @@ function bitShow(input = "shows") {
             item.show.name
           );
 
-          createNewCard(newCard.card);
+          createNewCard(newCard);
+          // console.log("New Card:", newCard);
         });
         addOnClickListener("dugme", "btn-");
         addOnClickListener("card-img-top", "img-");
@@ -66,7 +65,8 @@ function bitShow(input = "shows") {
             item.name
           );
 
-          createNewCard(newCard.card);
+          createNewCard(newCard);
+          // console.log("New Card:", newCard);
         });
         addOnClickListener("dugme", "btn-");
         addOnClickListener("card-img-top", "img-");
@@ -91,10 +91,7 @@ let searchText2;
 function inputSearch() {
   const newSearch = `search/shows?q=${searchText2}`;
 
-  fetch(`${url}${newSearch}`)
-    .then((response) => {
-      return response.json();
-    })
+  getData(`${url}${newSearch}`)
     .then((response) => {
       console.log("Search response", response);
       autoComplete.length = 0; // ISPRAZNI NIZ
