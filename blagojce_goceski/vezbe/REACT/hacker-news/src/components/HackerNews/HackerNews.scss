@@ -1,0 +1,107 @@
+.header-style {
+    background-color: #ea5421;
+
+    h1 {
+        color: white;
+        font-size: 1.25rem;
+        padding: 10px;
+    }
+}
+
+.user-list {
+    list-style-type: none;
+    background-color: #f6f6ee;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+
+        .left {
+            h4 {
+                font-size: 1.25rem;
+            }
+        }
+
+        .right {
+            margin-left: 15px;
+
+            .right-up {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .title {
+                    font-size: 1.2rem;
+                    color: #ea5421;
+                    font-weight: bold;
+                }
+
+                .source {
+                    font-size: 0.8rem;
+                    color: #ea5421;
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+            }
+
+            .right-down {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .points-icon {
+                    font-size: 1rem;
+                    color: #87939c;
+                    position: relative;
+                    left: -5px;
+                    top: -3px;
+                }
+
+                .points {
+                    color: #87939c;
+                    font-size: 1.1rem;
+                }
+
+                .by-icon {
+                    font-size: 1rem;
+                    color: #87939c;
+                    position: relative;
+                    left: 20px;
+                    top: -3px;
+                }
+
+                .by {
+                    color: #ea5421;
+                    margin-left: 1.5rem;
+                    font-size: 1.1rem;
+                }
+
+                .time-icon {
+                    font-size: 1rem;
+                    color: #87939c;
+                    position: relative;
+                    left: 20px;
+                    top: -3px;
+                }
+
+                .time {
+                    color: #ea5421;
+                    margin-left: 1.5rem;
+                    font-size: 1.1rem;
+                }
+
+                .comments {
+                    background-color: #17a2b7;
+                    margin-left: 1.5rem;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 2px;
+                    padding-bottom: 3px;
+                    color: white;
+                    font-size: 0.75rem;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
