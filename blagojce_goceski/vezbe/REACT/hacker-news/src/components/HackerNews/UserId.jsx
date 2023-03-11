@@ -32,8 +32,12 @@ const UserId = (props) => {
   let d = new Date(userInfo.time);
   let time = d.getHours();
 
-  // SOURCE
-  let str1 = userInfo.url.split("/");
+  // SOURCE IS STRING?
+  let str1 = "";
+  typeof userInfo.url === "string"
+    ? (str1 = userInfo.url.split("/"))
+    : console.log("Nije string");
+
   console.log("ARRAY", str1);
 
   return (
