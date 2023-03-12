@@ -1,0 +1,30 @@
+.user-list {
+    list-style-type: none;
+
+    .list-item {
+        display: flex;
+        flex-direction: row;
+        border: solid 1px rgb(182, 181, 181);
+        width: 80vw;
+        margin-left: 5vw;
+
+        .div-left {
+            img {
+                border-radius: 50%;
+                border: solid 3px rgb(197, 196, 196);
+                margin-left: 1.25rem;
+                margin-top: 1rem;
+
+            }
+        }
+
+        .div-right {
+            margin-left: 1rem;
+            padding: 7px;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
