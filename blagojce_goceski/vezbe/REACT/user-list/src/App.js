@@ -17,8 +17,17 @@ function App() {
     <React.Fragment>
       <Header />
       <div className="button-var">
-        <ToggleButton variant="secondary" onClick={handleValue}>
-          {value ? "User List 1" : "User List 2"}
+        <ToggleButton
+          style={{
+            backgroundColor: "#ec6f75",
+            color: "white",
+            fontWeight: "bold",
+            marginBottom: "5px",
+          }}
+          variant="flat"
+          onClick={handleValue}
+        >
+          {value ? "User List Var 1" : "User List Var 2"}
         </ToggleButton>
       </div>
       {value ? <UserList /> : <UserListVar2 />}
