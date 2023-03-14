@@ -1,0 +1,41 @@
+.kontejner {
+    background-color: #3499dd;
+    width: 500px;
+    padding: 37px 100px;
+
+    .okvir {
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+
+        h1 {
+            color: #837f7d;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .form-text {
+            background-color: #ecf0f1;
+            border-color: #ecf0f1;
+            text-align: center;
+            color: #837f7d;
+            font-weight: 400;
+        }
+
+        .submit {
+            background-color: #3499dd;
+            border: #3499dd;
+            width: 273px;
+            height: 50px;
+            font-weight: 500;
+        }
+
+        .reset {
+            margin-bottom: 35px;
+            color: #837f7d;
+            font-weight: 500;
+        }
+    }
+
+}
