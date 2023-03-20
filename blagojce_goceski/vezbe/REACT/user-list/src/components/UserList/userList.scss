@@ -1,30 +1,63 @@
-.user-list {
-    list-style-type: none;
+.general {
 
-    .list-item {
-        display: flex;
-        flex-direction: row;
-        border: solid 1px rgb(182, 181, 181);
-        width: 80vw;
-        margin-left: 5vw;
+    .search-bar {
+        margin-top: 15px;
+        margin-bottom: 10px;
 
-        .div-left {
-            img {
-                border-radius: 50%;
-                border: solid 3px rgb(197, 196, 196);
-                margin-left: 1.25rem;
-                margin-top: 1rem;
+        .input-field {
+            display: flex;
 
+            .search-logo {
+                margin-right: 15px;
+            }
+
+            .search-input {
+                border-bottom: solid 1px rgb(197, 196, 196);
+                padding-left: 0px;
+            }
+        }
+    }
+
+    .male-female {
+        text-align: right;
+        color: rgb(150, 150, 150);
+        font-size: 1rem;
+    }
+
+    .user-list {
+
+        .list-item {
+            display: flex;
+            flex-direction: row;
+            border: solid 1px rgb(197, 196, 196);
+            height: 100px;
+
+            .div-left {
+                img {
+                    width: 70px;
+                    border-radius: 50%;
+                    border: solid 3px rgb(197, 196, 196);
+                    margin-left: 1.25rem;
+                    margin-top: 1rem;
+                }
+            }
+
+            .div-right {
+                display: flex;
+                flex-direction: column;
+                margin-left: 1rem;
+
+                h3 {
+                    font-size: 1rem;
+                    color: rgb(100, 99, 99);
+                    margin-block-start: 10px;
+                    margin-block-end: 0px;
+                }
             }
         }
 
-        .div-right {
-            margin-left: 1rem;
-            padding: 7px;
-
-            h3 {
-                font-size: 1.2rem;
-            }
+        .femaleBg {
+            background-color: #ffebee;
         }
     }
 }

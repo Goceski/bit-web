@@ -8,28 +8,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "materialize-css/dist/css/materialize.min.css";
 import "./userCard.scss";
 
-const UserCards = () => {
-  const [users, setUsers] = useState([]);
-  const [usersBackUp, setUsersBackUp] = useState([]);
+const UserCards = (props) => {
+  // console.log("USERCARDS PROPS", props);
+
+  // GET USERS FROM LOCAL STORAGE
+  const reactUsers = JSON.parse(localStorage.getItem("reactUsers"));
+
+  const [users, setUsers] = useState(reactUsers);
+  const [usersBackUp, setUsersBackUp] = useState(reactUsers);
   const [inputValue, setInputValue] = useState("");
   const [maleNumber, setMaleNumber] = useState(0);
   const [femaleNumber, setFemaleNumber] = useState(0);
 
-  // UCITAVANJE PODATAKA SA API
-  useEffect(() => {
-    fetch("https://randomuser.me/api/?results=15")
-      // "https://gist.githubusercontent.com/nenadbugaric/385c0200f1886180f6143cad72fadeac/raw/0bc527c2977debe86e18829b42c3abab235de4ce/RandomUsers.js"
-      .then((res) => res.json())
-      .then((json) => {
-        // console.log("JSON:", json);
-        console.log("JSON.results:", json.results);
-        setUsers(json.results);
-        setUsersBackUp(json.results);
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
-  }, []);
+  // console.log("USERS", users);
+  // console.log("USERS BACKUP", usersBackUp);
 
   // !!! LOGIKA ZA USER SEARCH !!! -------------------------------
   useEffect(() => {
@@ -47,7 +39,15 @@ const UserCards = () => {
         return name.includes(inputValue);
       });
 
-      setUsers(data);
+      // NO USER MATCH INPUT STRING --------------------
+      if (data.length > 0) {
+        setUsers(data);
+        props.userMatch(true);
+      } else {
+        setUsers(data);
+        props.userMatch(false);
+      }
+      // -----------------------------------------------
     } else {
       setUsers(usersBackUp);
     }

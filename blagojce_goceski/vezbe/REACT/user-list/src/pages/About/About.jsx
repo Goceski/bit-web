@@ -1,7 +1,25 @@
 import React from "react";
+import { LoremIpsum } from "react-lorem-ipsum";
 
-const About = () => {
-  return <h1>About Page</h1>;
+const About = (props) => {
+  // console.log("ABOUT PROPS", props);
+
+  // HIDE NAV-BAR -------------------------------------------
+  props.funcFalse();
+  // --------------------------------------------------------
+
+  return (
+    <>
+      <div className="row">
+        <div className="col-10 offset-1">
+          <h2 className="naslov1">About</h2>
+          <LoremIpsum p={1} />
+          <h3 className="naslov2">What we do</h3>
+          <LoremIpsum p={1} />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default About;

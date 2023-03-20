@@ -6,13 +6,22 @@ import About from "./About/About";
 import Reload from "./Reload/Reload";
 
 const Main = (props) => {
-  console.log("VALUE in MAIN:", props.value);
+  // console.log("PROPS MAIN:", props);
 
   return (
     <Routes>
-      <Route path="/" element={<Home value={props.value} />}></Route>
-      <Route path="/about" element={<About />}></Route>
-      <Route path="/reload" element={<Reload />}></Route>
+      <Route
+        path="/"
+        element={<Home value={props.value} funcTrue={props.funcTrue} />}
+      ></Route>
+      <Route
+        path="/about"
+        element={<About funcFalse={props.funcFalse} />}
+      ></Route>
+      <Route
+        path="/reload"
+        element={<Reload funcTrue={props.funcTrue} />}
+      ></Route>
     </Routes>
   );
 };
