@@ -1,12 +1,25 @@
 .footer-container {
-    background-color: #ec6f75;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    height: 3rem;
-    margin-top: 10px;
+    justify-content: space-between;
+    background-color: #ec6f75;
 
-    h6 {
-        color: white;
+    .container-left {
+        height: 3rem;
+        margin-top: 10px;
+
+        h6 {
+            color: white;
+            margin-left: 12vw;
+        }
     }
+
+    .container-right {
+        h6 {
+            color: white;
+            margin-right: 12vw;
+        }
+    }
+
 }

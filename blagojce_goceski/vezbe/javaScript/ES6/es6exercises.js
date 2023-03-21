@@ -84,6 +84,7 @@ function filterIntegerValues(input = []) {
 }
 
 console.log(filterIntegerValues([1.6, 11.34, 9.23, 7, 3.11, 8]));
+// console.table(filterIntegerValues([1.6, 11.34, 9.23, 7, 3.11, 8]));
 //
 //
 // 7

@@ -3,18 +3,22 @@ import FetchData from "../../components/FetchData/FetchData";
 import { Navigate } from "react-router-dom";
 
 const Reload = (props) => {
-  console.log("RELOAD PROPS", props);
+  // console.log("RELOAD PROPS", props);
 
-  // SHOW NAV-BAR (HIDE U ABOUT) -------------------------------------------
+  // SHOW NAV-BAR (HIDE U ABOUT) ----------------------------
   props.funcTrue();
-  // -----------------------------------------------------------------------
+  // --------------------------------------------------------
+
+  // HIDE LAST UPDATE ---------------------------------------
+  props.lastUpdateFalse();
+  // --------------------------------------------------------
 
   // DELAY FUNCTION --------------------------------------------------------
   const [delay, setDelay] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setDelay(true);
-    }, 2000);
+    }, 1250);
 
     return () => clearTimeout(timeout);
   }, [delay]);

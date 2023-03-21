@@ -2,10 +2,14 @@ import React from "react";
 import { LoremIpsum } from "react-lorem-ipsum";
 
 const About = (props) => {
-  // console.log("ABOUT PROPS", props);
+  console.log("ABOUT PROPS", props);
 
   // HIDE NAV-BAR -------------------------------------------
   props.funcFalse();
+  // --------------------------------------------------------
+
+  // HIDE LAST UPDATE ---------------------------------------
+  props.lastUpdateFalse();
   // --------------------------------------------------------
 
   return (

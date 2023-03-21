@@ -14,6 +14,10 @@ const FetchData = (props) => {
         // SAVE DATA TO LOCAL STORAGE
         localStorage.setItem("reactUsers", JSON.stringify(json.results));
 
+        // DATA LAST UPDATE
+        const lastUpdate = new Date().getTime(); //Date since January 1, 1970 in miliseconds
+        localStorage.setItem("lastUpdate", `${lastUpdate}`); // Save to LocalStorage
+
         // LOADER CONTROL
         props.fetchDataSetting();
       })

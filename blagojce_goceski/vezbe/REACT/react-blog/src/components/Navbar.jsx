@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="header">
-        <h1>Navbar</h1>
+        <h1>My React Blog</h1>
       </div>
     </div>
   );

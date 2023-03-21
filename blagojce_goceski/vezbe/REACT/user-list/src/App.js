@@ -12,10 +12,10 @@ import Main from "./pages/Main";
 function App() {
   // STATE 'true/false' ZA OPCIJU LIST-GRID ----------------------------------------
   const [value, setValue] = useState(true);
-  // Funkcija da se prosledi podatak 'true/false' od child komponente 'Header'  prema parent componenti 'App'
+  // Funkcija da se prosledi podatak za 'value' 'true/false' od child komponente 'Header' prema parent componenti 'App'
   const toggleButtonValue = (data) => {
     data ? setValue(false) : setValue(true);
-    console.log("VALUE in APP:", data);
+    console.log("VALUE in APP:", value);
   };
   // -------------------------------------------------------------------------------
 
@@ -30,18 +30,29 @@ function App() {
   };
   // -------------------------------------------------------------------------------
 
+  // STATE 'true/false' ZA SHOW/HIDE LAST UPDATE -----------------------------------
+  const [lastUpdateValue, setLastUpdateValue] = useState(true);
+  // Funkcije da se prosledi podatak 'true/false' od child komponente 'Home' 'About' 'Reload' prema parent componenti 'App'
+  const lastUpdateValueTrue = () => {
+    setLastUpdateValue(true);
+  };
+  const lastUpdateValueFalse = () => {
+    setLastUpdateValue(false);
+  };
+  // -------------------------------------------------------------------------------
+
   return (
-    <React.Fragment>
-      <BrowserRouter>
-        <Header func={toggleButtonValue} navBarValue={navBarValue} />
-        <Main
-          value={value}
-          funcTrue={navBarValueTrue}
-          funcFalse={navBarValueFalse}
-        />
-        <Footer />
-      </BrowserRouter>
-    </React.Fragment>
+    <BrowserRouter>
+      <Header func={toggleButtonValue} navBarValue={navBarValue} />
+      <Main
+        value={value}
+        funcTrue={navBarValueTrue}
+        funcFalse={navBarValueFalse}
+        lastUpdateTrue={lastUpdateValueTrue}
+        lastUpdateFalse={lastUpdateValueFalse}
+      />
+      <Footer lastUpdateValue={lastUpdateValue} />
+    </BrowserRouter>
   );
 }
 

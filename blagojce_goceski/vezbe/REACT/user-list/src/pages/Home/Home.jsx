@@ -13,13 +13,17 @@ function Home(props) {
   props.funcTrue();
   // -----------------------------------------------------------------------
 
+  // SHOW LAST UPDATE ------------------------------------------------------
+  props.lastUpdateTrue();
+  // -----------------------------------------------------------------------
+
   // PRIKAZ U ZAVISNOSTI OD IZBORA 'LIST' ILI 'CARDS' ----------------------
   const [value, setValue] = useState(props.value);
-  console.log("VALUE in HOME:", props.value);
 
   useEffect(() => {
-    props.value ? setValue(false) : setValue(true);
-  }, [props]);
+    props.value ? setValue(true) : setValue(false);
+    console.log("VALUE-HOME:", value);
+  }, [props.value]);
   // -----------------------------------------------------------------------
 
   // NO USER MATCH ---------------------------------------------------------
@@ -33,9 +37,9 @@ function Home(props) {
   return (
     <React.Fragment>
       {value ? (
-        <UserCards userMatch={toggleUserMatch} />
-      ) : (
         <UserList userMatch={toggleUserMatch} />
+      ) : (
+        <UserCards userMatch={toggleUserMatch} />
       )}
       {userMatch === false && <NoUserMatch />}
     </React.Fragment>

@@ -36,7 +36,7 @@ const UserCards = (props) => {
         let name = firstName + " " + lastName;
         console.log("NAME", name);
 
-        return name.includes(inputValue);
+        return name.includes(inputValue.toLowerCase());
       });
 
       // NO USER MATCH INPUT STRING --------------------

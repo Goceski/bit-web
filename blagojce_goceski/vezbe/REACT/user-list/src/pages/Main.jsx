@@ -12,15 +12,33 @@ const Main = (props) => {
     <Routes>
       <Route
         path="/"
-        element={<Home value={props.value} funcTrue={props.funcTrue} />}
+        element={
+          <Home
+            value={props.value}
+            funcTrue={props.funcTrue}
+            lastUpdateTrue={props.lastUpdateTrue}
+          />
+        }
       ></Route>
       <Route
         path="/about"
-        element={<About funcFalse={props.funcFalse} />}
+        element={
+          <About
+            value={props.value}
+            funcFalse={props.funcFalse}
+            lastUpdateFalse={props.lastUpdateFalse}
+          />
+        }
       ></Route>
       <Route
         path="/reload"
-        element={<Reload funcTrue={props.funcTrue} />}
+        element={
+          <Reload
+            value={props.value}
+            funcTrue={props.funcTrue}
+            lastUpdateFalse={props.lastUpdateFalse}
+          />
+        }
       ></Route>
     </Routes>
   );

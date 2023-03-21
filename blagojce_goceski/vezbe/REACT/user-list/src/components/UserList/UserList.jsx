@@ -16,8 +16,8 @@ const UserList = (props) => {
   const [maleNumber, setMaleNumber] = useState(0);
   const [femaleNumber, setFemaleNumber] = useState(0);
 
-  // console.log("USERS", users);
-  // console.log("USERS BACKUP", usersBackUp);
+  console.log("USERS", users);
+  console.log("USERS BACKUP", usersBackUp);
 
   // !!! LOGIKA ZA USER SEARCH !!! -------------------------------
   useEffect(() => {
@@ -32,7 +32,7 @@ const UserList = (props) => {
         let name = firstName + " " + lastName;
         console.log("NAME", name);
 
-        return name.includes(inputValue);
+        return name.includes(inputValue.toLowerCase());
       });
 
       // NO USER MATCH INPUT STRING --------------------
