@@ -14,6 +14,25 @@ const UserCards = (props) => {
   // GET USERS FROM LOCAL STORAGE
   const reactUsers = JSON.parse(localStorage.getItem("reactUsers"));
 
+  // If NO LOCAL STORAGE ------------------------------ //
+  if (!reactUsers || reactUsers == null) {
+    fetch("https://randomuser.me/api/?results=15")
+      .then((res) => res.json())
+      .then((json) => {
+        // SAVE DATA TO LOCAL STORAGE
+        localStorage.setItem("reactUsers", JSON.stringify(json.results));
+        // DATA LAST UPDATE
+        const lastUpdate = new Date().getTime(); //Date since January 1, 1970 in miliseconds
+        localStorage.setItem("lastUpdate", `${lastUpdate}`); // Save to LocalStorage
+        // GET USERS FROM LOCAL STORAGE
+        reactUsers = JSON.parse(localStorage.getItem("reactUsers"));
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
+  }
+  // -------------------------------------------------- //
+
   const [users, setUsers] = useState(reactUsers);
   const [usersBackUp, setUsersBackUp] = useState(reactUsers);
   const [inputValue, setInputValue] = useState("");
