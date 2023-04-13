@@ -1,0 +1,26 @@
+$color-light1: #F0EBE3;
+$color-light2: #E4DCCF;
+$color-dark1: #7D9D9C;
+$color-dark2: #576F72;
+
+.navbar {
+    width: 100%;
+    background-color: $color-dark1;
+    padding: 7px;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    button {
+        font-size: 2.75rem;
+        width: 75px;
+        height: 75px;
+        color: $color-light1;
+        background-color: $color-dark1;
+        border: 3px solid $color-light1;
+        border-radius: 40px;
+        margin-right: 7px;
+        padding: 0.5rem;
+    }
+}
